@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HomeViewController.h"
 
 @implementation AppDelegate
 
@@ -15,8 +16,27 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.windowLevel = UIWindowLevelStatusBar + 1.0f;
+
+    HomeViewController *homeVC = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
+    self.navVC = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    self.navVC.navigationBarHidden = YES;
+    [self fakeNavigationBar];
+    
+    self.window.rootViewController = self.navVC;
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)fakeNavigationBar
+{
+    UIImageView *navigationBar = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"title.jpg"]];
+    [navigationBar setFrame:CGRectMake(0, 0, 1024, 82)];
+    [self.navVC.view addSubview:navigationBar];
+    
+    UIImageView *line = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home_line.jpg"]];
+    [line setFrame:CGRectMake(0, 82, 1024, 2)];
+    [self.navVC.view addSubview:line];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

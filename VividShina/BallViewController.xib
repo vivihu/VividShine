@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BallViewController">
+            <connections>
+                <outlet property="optionalBall" destination="upF-1g-Lp7" id="bHp-Vm-fm7"/>
+                <outlet property="view" destination="2" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" id="QYv-4n-aP6">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG.png" id="msW-hw-NFV">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rcq-sg-Dbn">
+                    <rect key="frame" x="427" y="170" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball01.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball01s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="duT-FI-Hu2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fvE-j6-QnA">
+                    <rect key="frame" x="850" y="584" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball19.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball19s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="uV4-p9-iH1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qio-uQ-CHt">
+                    <rect key="frame" x="705" y="584" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball18.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball18s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="eqU-Sy-vUd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fwU-Zk-wWN">
+                    <rect key="frame" x="568" y="584" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball17.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball17s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="tMQ-hb-HSk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="acC-PV-bY7">
+                    <rect key="frame" x="427" y="584" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball16.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball16s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="STV-iE-qyz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="44" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pTs-wC-Ocl">
+                    <rect key="frame" x="850" y="447" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball15.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball15s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="Whj-qX-TEE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bpF-fE-e1l">
+                    <rect key="frame" x="705" y="447" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball14.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball14s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="ihm-iI-Edq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vcF-Z8-En9">
+                    <rect key="frame" x="568" y="447" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball13.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball13s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="xWp-Cv-HbB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="i9x-NF-sZo">
+                    <rect key="frame" x="427" y="447" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball12.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball12s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="laJ-Su-X2I"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NL8-c7-Koa">
+                    <rect key="frame" x="850" y="306" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball11.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball11s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="rVV-z3-X6q"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="42" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1tQ-3o-TvF">
+                    <rect key="frame" x="705" y="306" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball10.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball10s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="6gZ-dx-wwR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UD2-fy-Nii">
+                    <rect key="frame" x="568" y="306" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball09.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball09s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="lSR-GL-gOo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DrV-qS-MRW">
+                    <rect key="frame" x="427" y="306" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball08.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball08s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="RXd-yj-Qit"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="43" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3WS-sF-kwx">
+                    <rect key="frame" x="850" y="170" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball07.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball07s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="KbE-xO-wiw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="26K-nJ-TXg">
+                    <rect key="frame" x="705" y="170" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball05.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball05s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="8t7-aQ-fCR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tOO-LG-vy4">
+                    <rect key="frame" x="568" y="170" width="126" height="126"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="ball03.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="ball03s.png"/>
+                    <connections>
+                        <action selector="selectType:" destination="-1" eventType="touchUpInside" id="t8e-wv-NHj"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="upF-1g-Lp7">
+                    <rect key="frame" x="133" y="292" width="20" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BG.png" width="1024" height="768"/>
+        <image name="background.jpg" width="1024" height="768"/>
+        <image name="ball01.png" width="126" height="126"/>
+        <image name="ball01s.png" width="126" height="126"/>
+        <image name="ball03.png" width="126" height="126"/>
+        <image name="ball03s.png" width="126" height="126"/>
+        <image name="ball05.png" width="126" height="126"/>
+        <image name="ball05s.png" width="126" height="126"/>
+        <image name="ball07.png" width="126" height="126"/>
+        <image name="ball07s.png" width="126" height="126"/>
+        <image name="ball08.png" width="126" height="126"/>
+        <image name="ball08s.png" width="126" height="126"/>
+        <image name="ball09.png" width="126" height="126"/>
+        <image name="ball09s.png" width="126" height="126"/>
+        <image name="ball10.png" width="126" height="126"/>
+        <image name="ball10s.png" width="126" height="126"/>
+        <image name="ball11.png" width="126" height="126"/>
+        <image name="ball11s.png" width="126" height="126"/>
+        <image name="ball12.png" width="126" height="126"/>
+        <image name="ball12s.png" width="126" height="126"/>
+        <image name="ball13.png" width="126" height="126"/>
+        <image name="ball13s.png" width="126" height="126"/>
+        <image name="ball14.png" width="126" height="126"/>
+        <image name="ball14s.png" width="126" height="126"/>
+        <image name="ball15.png" width="126" height="126"/>
+        <image name="ball15s.png" width="126" height="126"/>
+        <image name="ball16.png" width="126" height="126"/>
+        <image name="ball16s.png" width="126" height="126"/>
+        <image name="ball17.png" width="126" height="126"/>
+        <image name="ball17s.png" width="126" height="126"/>
+        <image name="ball18.png" width="126" height="126"/>
+        <image name="ball18s.png" width="126" height="126"/>
+        <image name="ball19.png" width="126" height="126"/>
+        <image name="ball19s.png" width="126" height="126"/>
+    </resources>
+</document>
