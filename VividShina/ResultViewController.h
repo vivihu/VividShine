@@ -11,14 +11,14 @@
 
 @interface ResultViewController : RootViewController
 {
-    IBOutlet UILabel *One;
-    IBOutlet UILabel *two;
-    IBOutlet UILabel *three;
-    IBOutlet UILabel *four;
+    IBOutlet UILabel *_SSGX;
+    IBOutlet UILabel *_FYNQ;
+    IBOutlet UILabel *_RHQT;
+    IBOutlet UILabel *_YZYY;
 }
 
-- (IBAction)nextStep:(id)sender;
+@property (nonatomic,strong) NSDictionary *dataDic;
 
-- (void)configResult:(NSMutableArray *)seletedBalls;
+- (IBAction)nextStep:(id)sender;
 
 @end

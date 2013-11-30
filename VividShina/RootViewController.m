@@ -28,6 +28,22 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (UIButton *)creatHomeBtn
+{
+    UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
+    [back setImage:[UIImage imageNamed:@"home.jpg"] forState:UIControlStateNormal];
+    [back setFrame:CGRectMake(1024-68, 12, 55, 55)];
+    [back addTarget:self action:@selector(backToHome:) forControlEvents:UIControlEventTouchUpInside];
+    return back;
+}
+
+- (void)backToHome:(UIButton *)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    [btn removeFromSuperview];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

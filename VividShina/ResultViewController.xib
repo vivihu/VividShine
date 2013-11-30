@@ -7,10 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController">
             <connections>
-                <outlet property="One" destination="uv2-nb-pxd" id="1Bo-rk-AuU"/>
-                <outlet property="four" destination="BEQ-YJ-POq" id="2uB-Ze-G1e"/>
-                <outlet property="three" destination="p4V-mb-Yfb" id="8Rx-jr-1si"/>
-                <outlet property="two" destination="vMS-nt-IZy" id="6SV-na-Cra"/>
+                <outlet property="_FYNQ" destination="vMS-nt-IZy" id="tsT-oU-PMk"/>
+                <outlet property="_RHQT" destination="p4V-mb-Yfb" id="R5w-Iv-DZn"/>
+                <outlet property="_SSGX" destination="uv2-nb-pxd" id="P4R-rH-uwA"/>
+                <outlet property="_YZYY" destination="BEQ-YJ-POq" id="BbK-rS-PsR"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>

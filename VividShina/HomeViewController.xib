@@ -55,7 +55,7 @@
                     <rect key="frame" x="311" y="84" width="713" height="684"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </scrollView>
-                <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="MJX-dz-fNB">
+                <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" id="MJX-dz-fNB">
                     <rect key="frame" x="646" y="730" width="39" height="37"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                     <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

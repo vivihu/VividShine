@@ -12,7 +12,6 @@
 @interface ResultViewController ()
 {
     UIButton *_backBtn;
-    int first, sec, third, fourth;
 }
 
 @end
@@ -23,7 +22,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+//        [self setLabelText];
     }
     return self;
 }
@@ -59,39 +58,40 @@
 
 - (void)setLabelText
 {
-    One.text    =   [NSString stringWithFormat:@"%d",third * 20];
-    two.text    =   [NSString stringWithFormat:@"%d",fourth * 20];
-    three.text  =   [NSString stringWithFormat:@"%d",first * 20];
-    four.text   =   [NSString stringWithFormat:@"%d",sec * 20];
+    _SSGX.text  =   [NSString stringWithFormat:@"%d",[[self.dataDic objectForKey:@"third"] intValue] * 20];
+    _FYNQ.text  =   [NSString stringWithFormat:@"%d",[[self.dataDic objectForKey:@"fourth"] intValue] * 20];
+    _RHQT.text  =   [NSString stringWithFormat:@"%d",[[self.dataDic objectForKey:@"first"] intValue] * 20];
+    _YZYY.text  =   [NSString stringWithFormat:@"%d",[[self.dataDic objectForKey:@"sec"] intValue] * 20];
 }
 
-- (void)configResult:(NSMutableArray *)seletedBalls
+- (MyStyle )CalculateTheStyle
 {
-//    NSLog(@"%@",seletedBalls);
-    for (NSNumber *number in seletedBalls) {
-        int num = number.intValue;
-        
-        if (num > 10 && num < 20)
-            first++;
-        
-        else if (num > 20 && num < 30)
-            sec++;
-        
-        else if (num > 30 && num < 40)
-            third++;
+    int one = [[self.dataDic objectForKey:@"first"] intValue];
+    int two = [[self.dataDic objectForKey:@"sec"] intValue];
+    int thr = [[self.dataDic objectForKey:@"third"] intValue];
+    int fou = [[self.dataDic objectForKey:@"fourth"] intValue];
 
-        else if (num > 40 && num < 50)
-            fourth++;
-    }
-    //   ios6 下调用
-    [self setLabelText];
+    
+    NSInteger a = MAX(one, two);
+    a = MAX(a, thr);
+    a = MAX(a, fou);
+    
+    if (a == one)
+        return style_one;
+    else if (a == two)
+        return style_two;
+    else if (a == thr)
+        return style_three;
+    else
+        return style_four;
 }
 
 - (IBAction)nextStep:(id)sender {
     DescriptionViewController *desVC = [[DescriptionViewController alloc] initWithNibName:@"DescriptionViewController" bundle:nil];
+
+    desVC.myStyle = [self CalculateTheStyle];
+
     [self.navigationController pushViewController:desVC animated:YES];
-    
-    [desVC configResult:style_two];;
 }
 
 @end

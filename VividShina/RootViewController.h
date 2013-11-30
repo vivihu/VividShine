@@ -11,5 +11,6 @@
 @interface RootViewController : UIViewController
 
 - (UIButton *)creatBackBtn;
+- (UIButton *)creatHomeBtn;
 
 @end

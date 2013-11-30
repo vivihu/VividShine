@@ -13,6 +13,8 @@
 {
     IBOutlet UIScrollView *_kvScrollView;
     IBOutlet UIPageControl *_pageControl;
+    
+    NSTimer *_timer;
 }
 
 - (IBAction)testingStyle:(id)sender;

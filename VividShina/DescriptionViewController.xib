@@ -26,7 +26,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5cW-Cw-dHT">
-                    <rect key="frame" x="61" y="34" width="164" height="35"/>
+                    <rect key="frame" x="74" y="424" width="171" height="43"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="fenxiang.jpg">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -42,6 +42,6 @@
     </objects>
     <resources>
         <image name="background.jpg" width="1024" height="768"/>
-        <image name="fenxiang.jpg" width="164" height="35"/>
+        <image name="fenxiang.jpg" width="171" height="43"/>
     </resources>
 </document>

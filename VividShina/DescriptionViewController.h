@@ -10,7 +10,7 @@
 #import "RootViewController.h"
 
 typedef enum {
-    style_one,
+    style_one = 0,
     style_two,
     style_three,
     style_four
@@ -22,9 +22,8 @@ typedef enum {
     IBOutlet UIButton *_shareBtn;
 }
 
-//@property (nonatomic) MyStyle myStyle;
+@property (nonatomic) MyStyle myStyle;
 
-- (void)configResult:(MyStyle )mystyle;
 - (IBAction)shareToFriend:(id)sender;
 
 @end

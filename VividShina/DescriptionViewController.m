@@ -8,10 +8,10 @@
 
 #import "DescriptionViewController.h"
 
-#define frameONE CGRectMake(138, 394, 164, 35)
-#define frameTWO CGRectMake(138, 388, 164, 35)
-#define frameTHR CGRectMake(138, 386, 164, 35)
-#define frameFOU CGRectMake(74, 420, 164, 35)
+#define frameONE CGRectMake(74, 420, 171, 43)
+#define frameTWO CGRectMake(74, 440, 171, 43)
+#define frameTHR CGRectMake(74, 408, 171, 43)
+#define frameFOU CGRectMake(74, 424, 171, 43)
 
 @interface DescriptionViewController ()
 {
@@ -26,7 +26,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+//        [self configResult];
     }
     return self;
 }
@@ -34,7 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self configResult];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,9 +57,9 @@
     _backBtn = nil;
 }
 
-- (void)configResult:(MyStyle )mystyle
+- (void)configResult
 {
-    switch (mystyle) {
+    switch (self.myStyle) {
         case style_one:
         {
             [_shareBtn setFrame:frameONE];
