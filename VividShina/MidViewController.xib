@@ -10,6 +10,7 @@
                 <outlet property="_box" destination="3C6-cl-K9N" id="TrY-IO-ZQN"/>
                 <outlet property="_brownBtn" destination="c2h-ST-DDh" id="1Il-x2-tpQ"/>
                 <outlet property="_goldBtn" destination="0pQ-zZ-LHi" id="lz1-KL-2nm"/>
+                <outlet property="_leftYY" destination="YSb-VT-Yx1" id="q4s-07-CWp"/>
                 <outlet property="_pinkBtn" destination="qtf-2v-bWp" id="fLd-bu-duS"/>
                 <outlet property="_purpleBtn" destination="eqd-ls-a5l" id="1l7-kN-nGU"/>
                 <outlet property="view" destination="2" id="3"/>
@@ -20,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yanying_left.jpg" id="YSb-VT-Yx1">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="YSb-VT-Yx1">
                     <rect key="frame" x="0.0" y="128" width="367" height="640"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -109,7 +110,6 @@
         <image name="h2.png" width="138" height="32"/>
         <image name="ka1.png" width="144" height="33"/>
         <image name="ka2.png" width="144" height="33"/>
-        <image name="yanying_left.jpg" width="367" height="640"/>
         <image name="zi1.png" width="131" height="31"/>
         <image name="zi2.png" width="131" height="31"/>
     </resources>

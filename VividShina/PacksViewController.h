@@ -7,7 +7,16 @@
 //
 
 #import "RootViewController.h"
+#import "SwipeView.h"
 
-@interface PacksViewController : RootViewController
-
+@interface PacksViewController : RootViewController<SwipeViewDataSource,SwipeViewDelegate>
+{
+    IBOutlet UIPageControl *_pageControl;
+    
+    SwipeView *_textSwipeView;
+    SwipeView *_imageSwipeView;
+    
+    NSArray *_textData;
+    NSArray *_imageData;
+}
 @end

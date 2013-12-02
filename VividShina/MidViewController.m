@@ -45,6 +45,17 @@
     }
 }
 
+- (void)configIndexButton:(NSInteger)indexTag
+{
+    NSString *boxName = [NSString stringWithFormat:@"box%d.png",indexTag/10];
+    _box.image = [UIImage imageNamed:boxName];
+
+    NSString *imgName = [NSString stringWithFormat:@"left%d",indexTag/10];
+    NSString *imgPath = [[NSBundle mainBundle] pathForResource:imgName ofType:@"jpg"];
+    _leftYY.image = [UIImage imageWithContentsOfFile:imgPath];
+}
+
+
 - (IBAction)selectedColor:(id)sender {
     for (UIView *subView in [self.view subviews]) {
         if ([subView isKindOfClass:[UIButton class]]) {
@@ -54,8 +65,8 @@
     UIButton *btn = (UIButton *)sender;
     [btn setSelected:YES];
 
-    NSString *imageName = [NSString stringWithFormat:@"box%d.png",btn.tag/10];
-    _box.image = [UIImage imageNamed:imageName];
+    
+    [self configIndexButton:btn.tag];
 }
 
 @end

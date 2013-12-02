@@ -16,6 +16,7 @@
     IBOutlet UIButton *_goldBtn;
     
     IBOutlet UIImageView *_box;
+    IBOutlet UIImageView *_leftYY;
 }
 
 - (IBAction)selectedColor:(id)sender;

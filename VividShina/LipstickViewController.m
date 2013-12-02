@@ -76,6 +76,10 @@
 
 - (void)creatTabBar
 {
+    NSArray *labelText = @[ @"凝于唇  花漾  “琉光主角唇膏”",
+                            @"恋于眸   花漾恋波眼影",
+                            @"跃于指  花漾指甲油"
+                            ];
     for (int i = 0; i < 3; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setFrame:CGRectMake(1+i*340, 84, 340, 44)];
@@ -83,24 +87,14 @@
         [btn addTarget:self action:@selector(selectedIndexVC:) forControlEvents:UIControlEventTouchUpInside];
         [btn setBackgroundColor:[UIColor whiteColor]];
         [self.view addSubview:btn];
+        
+        UILabel *leftTxet = [[UILabel alloc] initWithFrame:CGRectMake(btn.frame.origin.x, 90, btn.frame.size.width, 32)];
+        leftTxet.font = [UIFont systemFontOfSize:19.0f];
+        leftTxet.text = labelText[i];
+        leftTxet.backgroundColor = [UIColor clearColor];
+        leftTxet.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:leftTxet];
     }
-    UILabel *leftTxet = [[UILabel alloc] initWithFrame:CGRectMake(60, 90, 254, 32)];
-    leftTxet.font = [UIFont systemFontOfSize:19.0f];
-    leftTxet.text = @"凝于唇  花漾  “琉光主角唇膏”";
-    leftTxet.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:leftTxet];
-    
-    UILabel *midTxet = [[UILabel alloc] initWithFrame:CGRectMake(426, 90, 188, 32)];
-    midTxet.font = [UIFont systemFontOfSize:19.0f];
-    midTxet.text = @"恋于眸   花漾恋波眼影";
-    midTxet.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:midTxet];
-    
-    UILabel *rightTxet = [[UILabel alloc] initWithFrame:CGRectMake(772, 90, 188, 32)];
-    rightTxet.font = [UIFont systemFontOfSize:19.0f];
-    rightTxet.text = @"跃于指  花漾指甲油";
-    rightTxet.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:rightTxet];
     
     UIView *lineV1 = [[UIView alloc] initWithFrame:CGRectMake(340, 90, 1, 38)];
     lineV1.backgroundColor = [UIColor lightGrayColor];
