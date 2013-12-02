@@ -210,6 +210,14 @@
 - (void)swipeViewDidEndDecelerating:(SwipeView *)swipeView
 {
     [self scrollToIndexPage:swipeView.currentPage];
+    
+    NSInteger indexPage = swipeView.currentPage;
+    if (indexPage < kPageOne)
+        [self setSliderRectIndex:0];
+    else if (indexPage >= kPageOne && indexPage < kPageOne+kPageTwo)
+        [self setSliderRectIndex:1];
+    else
+        [self setSliderRectIndex:2];
 }
 
 - (void)swipeViewDidEndScrollingAnimation:(SwipeView *)swipeView
@@ -223,17 +231,14 @@
     if (indexPage < kPageOne) {
         _pageNumber = 0;
         _pageControl.numberOfPages = kPageOne;
-        [self setSliderRectIndex:0];
     }
     else if (indexPage >= kPageOne && indexPage < kPageOne+kPageTwo) {
         _pageNumber = kPageOne;
         _pageControl.numberOfPages = kPageTwo;
-        [self setSliderRectIndex:1];
     }
     else {
         _pageNumber = kPageOne+kPageTwo;
         _pageControl.numberOfPages = kPageThr;
-        [self setSliderRectIndex:2];
     }
     
     _pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];

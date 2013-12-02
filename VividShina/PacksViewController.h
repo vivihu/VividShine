@@ -19,4 +19,5 @@
     NSArray *_textData;
     NSArray *_imageData;
 }
+
 @end
