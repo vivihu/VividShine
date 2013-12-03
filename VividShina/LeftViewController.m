@@ -46,6 +46,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    ;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    ;
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     if (!_homeBtn) {

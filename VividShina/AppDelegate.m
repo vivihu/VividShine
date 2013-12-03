@@ -54,7 +54,7 @@
     [ShareSDK connectWeChatTimelineWithAppId:@"wxbce3f0bff27259cd" wechatCls:[WXApi class]];
 
     //添加新浪微博应用
-    [ShareSDK connectSinaWeiboWithAppKey:@"2384851066" appSecret:@"ffa34ef75bdd4ae01b705dd9ed0fd499" redirectUri:@"http://www.sharesdk.com"];
+    [ShareSDK connectSinaWeiboWithAppKey:@"2384851066" appSecret:@"ffa34ef75bdd4ae01b705dd9ed0fd499" redirectUri:@"http://www.el-lady.com.cn"];
     
     //添加腾讯微博应用
     [ShareSDK connectTencentWeiboWithAppKey:@"801420561" appSecret:@"543c3e59c84c2cdbafa4eaf32f1a7a12" redirectUri:@"http://www.el-lady.com.cn/futurist2013/"];

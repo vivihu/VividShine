@@ -11,7 +11,7 @@
 
 @interface BallViewController ()
 {
-    UIButton *_backBtn;
+//    UIButton *_backBtn;
     int first, sec, third, fourth;
 }
 @end
@@ -42,16 +42,17 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    if (!_backBtn) {
-        _backBtn = [self creatBackBtn];
-        [self.navigationController.view addSubview:_backBtn];
-    }
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [_backBtn removeFromSuperview];
-    _backBtn = nil;
+    [super viewWillDisappear:animated];
 }
 
 

@@ -232,6 +232,10 @@
 		91DD26AE184D7C3D00E03F6F /* ShareSDKiPhoneDefaultShareViewUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DD2678184D7C3D00E03F6F /* ShareSDKiPhoneDefaultShareViewUI.framework */; };
 		91DD26AF184D7C3D00E03F6F /* ShareSDKiPhoneSimpleShareViewUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91DD2679184D7C3D00E03F6F /* ShareSDKiPhoneSimpleShareViewUI.bundle */; };
 		91DD26B0184D7C3D00E03F6F /* ShareSDKiPhoneSimpleShareViewUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DD267A184D7C3D00E03F6F /* ShareSDKiPhoneSimpleShareViewUI.framework */; };
+		91DD26B5184DA84D00E03F6F /* share3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91DD26B1184DA84D00E03F6F /* share3.jpg */; };
+		91DD26B6184DA84D00E03F6F /* share2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91DD26B2184DA84D00E03F6F /* share2.jpg */; };
+		91DD26B7184DA84D00E03F6F /* share1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91DD26B3184DA84D00E03F6F /* share1.jpg */; };
+		91DD26B8184DA84D00E03F6F /* share4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91DD26B4184DA84D00E03F6F /* share4.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -493,6 +497,10 @@
 		91DD2678184D7C3D00E03F6F /* ShareSDKiPhoneDefaultShareViewUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKiPhoneDefaultShareViewUI.framework; sourceTree = "<group>"; };
 		91DD2679184D7C3D00E03F6F /* ShareSDKiPhoneSimpleShareViewUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKiPhoneSimpleShareViewUI.bundle; sourceTree = "<group>"; };
 		91DD267A184D7C3D00E03F6F /* ShareSDKiPhoneSimpleShareViewUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKiPhoneSimpleShareViewUI.framework; sourceTree = "<group>"; };
+		91DD26B1184DA84D00E03F6F /* share3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = share3.jpg; path = image/share3.jpg; sourceTree = "<group>"; };
+		91DD26B2184DA84D00E03F6F /* share2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = share2.jpg; path = image/share2.jpg; sourceTree = "<group>"; };
+		91DD26B3184DA84D00E03F6F /* share1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = share1.jpg; path = image/share1.jpg; sourceTree = "<group>"; };
+		91DD26B4184DA84D00E03F6F /* share4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = share4.jpg; path = image/share4.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -807,6 +815,10 @@
 		91915BFB184C26FE00B92B16 /* share */ = {
 			isa = PBXGroup;
 			children = (
+				91DD26B1184DA84D00E03F6F /* share3.jpg */,
+				91DD26B2184DA84D00E03F6F /* share2.jpg */,
+				91DD26B3184DA84D00E03F6F /* share1.jpg */,
+				91DD26B4184DA84D00E03F6F /* share4.jpg */,
 				91915BFC184C270900B92B16 /* close.png */,
 				91915BFD184C270900B92B16 /* email.jpg */,
 				91915BFE184C270900B92B16 /* tengxun.jpg */,
@@ -1187,6 +1199,7 @@
 				914ACC9E1849D7290076839B /* CG4.png in Resources */,
 				915E83B41845CB7500070A20 /* InfoPlist.strings in Resources */,
 				91D7E6231846E7510094B70D /* home_kv3.jpg in Resources */,
+				91DD26B6184DA84D00E03F6F /* share2.jpg in Resources */,
 				913B81C018482C1E0033E762 /* ball01.png in Resources */,
 				91915C02184C270900B92B16 /* close.png in Resources */,
 				91915BF4184C251A00B92B16 /* pack_kv6.jpg in Resources */,
@@ -1198,6 +1211,7 @@
 				913B81C218482C1E0033E762 /* ball03.png in Resources */,
 				91D7E61B1846E2F70094B70D /* home_btn2.jpg in Resources */,
 				91915BE5184C251A00B92B16 /* 1_1.png in Resources */,
+				91DD26B7184DA84D00E03F6F /* share1.jpg in Resources */,
 				913B81C418482C1E0033E762 /* ball05.png in Resources */,
 				913B81FC184869C50033E762 /* LeftViewController.xib in Resources */,
 				914ACC9F1849D7290076839B /* CG5.png in Resources */,
@@ -1228,6 +1242,7 @@
 				914ACCA81849D7290076839B /* mouth1.png in Resources */,
 				91D7E67C184743D40094B70D /* ResultViewController.xib in Resources */,
 				91611FB9184B054C00EF6ECF /* left4.jpg in Resources */,
+				91DD26B5184DA84D00E03F6F /* share3.jpg in Resources */,
 				91D7E6141846D9660094B70D /* home_leftBG.jpg in Resources */,
 				914ACCB11849D7290076839B /* mouth10.png in Resources */,
 				91DD26A8184D7C3D00E03F6F /* ShareSDKiPadDefaultShareViewUI.bundle in Resources */,
@@ -1292,6 +1307,7 @@
 				913B81E618482C1E0033E762 /* q1.png in Resources */,
 				91915BF2184C251A00B92B16 /* pack_kv4.jpg in Resources */,
 				91611FB1184AFF1200EF6ECF /* pack_leftBG.jpg in Resources */,
+				91DD26B8184DA84D00E03F6F /* share4.jpg in Resources */,
 				914ACCA91849D7290076839B /* mouth2.png in Resources */,
 				914ACCB31849D7290076839B /* mouth12.png in Resources */,
 				914ACCBA1849F4940076839B /* PacksViewController.xib in Resources */,
@@ -1495,22 +1511,6 @@
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/RenRenSDK",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/UI",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Connection",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Core",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/GooglePlusSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/Pinterest.embeddedframework",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/QQConnectSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/RenRenSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/UI",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Connection",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Core",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/UI",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend/GooglePlusSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend/Pinterest.embeddedframework",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend/RenRenSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VividShina/VividShina-Prefix.pch";
@@ -1518,12 +1518,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/SinaWeiboSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/TencentWeiboSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/WeChatSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend/libWeiboSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend/SDKExport",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend/TencentWeiboSSO",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/SinaWeiboSDK",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/TencentWeiboSDK",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/WeChatSDK",
@@ -1552,22 +1546,6 @@
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/RenRenSDK",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/UI",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Connection",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Core",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/GooglePlusSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/Pinterest.embeddedframework",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/QQConnectSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/RenRenSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/UI",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Connection",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Core",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/UI",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend/GooglePlusSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend/Pinterest.embeddedframework",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend/RenRenSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VividShina/VividShina-Prefix.pch";
@@ -1575,12 +1553,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/SinaWeiboSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/TencentWeiboSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/ShareSDK_v2.6.1/Extend/WeChatSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend/libWeiboSDK",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend/SDKExport",
-					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.5.0/Extend/TencentWeiboSSO",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/SinaWeiboSDK",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/TencentWeiboSDK",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/WeChatSDK",

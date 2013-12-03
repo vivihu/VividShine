@@ -17,6 +17,7 @@
 @interface DescriptionViewController ()
 {
     UIButton *_backBtn;
+    NSString *_imagePath;
 }
 
 @end
@@ -46,55 +47,62 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    if (!_backBtn) {
-        _backBtn = [self creatBackBtn];
-        [self.navigationController.view addSubview:_backBtn];
-    }
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [_backBtn removeFromSuperview];
-    _backBtn = nil;
+    [super viewWillDisappear:animated];
 }
 
 - (void)configResult
 {
+    NSString *imgPath = nil;
     switch (self.myStyle) {
         case style_one:
         {
             [_shareBtn setFrame:frameONE];
-            [_resultImage setImage:[UIImage imageNamed:@"one"]];
+            imgPath = [[NSBundle mainBundle] pathForResource:@"one" ofType:@"png"];
         }
             break;
         case style_two:
         {
             [_shareBtn setFrame:frameTWO];
-            [_resultImage setImage:[UIImage imageNamed:@"two"]];
+            imgPath = [[NSBundle mainBundle] pathForResource:@"two" ofType:@"png"];
         }
             break;
         case style_three:
         {
             [_shareBtn setFrame:frameTHR];
-            [_resultImage setImage:[UIImage imageNamed:@"three"]];
+            imgPath = [[NSBundle mainBundle] pathForResource:@"three" ofType:@"png"];
         }
             break;
         case style_four:
         {
             [_shareBtn setFrame:frameFOU];
-            [_resultImage setImage:[UIImage imageNamed:@"four"]];
+            imgPath = [[NSBundle mainBundle] pathForResource:@"four" ofType:@"png"];
         }
             break;
 
         default:
             break;
     }
+    NSString *str = [NSString stringWithFormat:@"share%d",self.myStyle];
+    _imagePath = [[NSBundle mainBundle] pathForResource:str ofType:@"jpg"];
+    
+    [_resultImage setImage:[UIImage imageWithContentsOfFile:imgPath]];
 }
 
 - (IBAction)shareToFriend:(id)sender {
     VIShareViewController *shareVC = [[VIShareViewController alloc] initWithNibName:@"VIShareViewController" bundle:nil];
     
     shareVC.nav = self.navigationController;
+    shareVC.currentImagePath = _imagePath;
     
     [self presentViewController:shareVC animated:YES completion:^{
         ;

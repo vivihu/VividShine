@@ -15,6 +15,7 @@
 }
 
 @property (nonatomic, strong) UINavigationController *nav;
+@property (nonatomic, strong) NSString *currentImagePath;
 
 - (IBAction)shareToFriend:(id)sender;
 

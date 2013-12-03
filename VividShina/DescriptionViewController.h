@@ -10,7 +10,7 @@
 #import "RootViewController.h"
 
 typedef enum {
-    style_one = 0,
+    style_one = 1,
     style_two,
     style_three,
     style_four

@@ -65,4 +65,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    if (!_backBtn) {
+        _backBtn = [self creatBackBtn];
+        [_backBtn setUserInteractionEnabled:NO];
+        [self.navigationController.view addSubview:_backBtn];
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if (_backBtn) {
+        [_backBtn setUserInteractionEnabled:YES];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    if (_backBtn) {
+        [_backBtn removeFromSuperview];
+        _backBtn = nil;
+    }
+}
+
 @end

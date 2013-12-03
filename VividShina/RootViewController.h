@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface RootViewController : UIViewController
-
+{
+    UIButton *_backBtn;
+}
 - (UIButton *)creatBackBtn;
 - (UIButton *)creatHomeBtn;
 
