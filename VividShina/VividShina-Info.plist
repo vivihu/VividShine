@@ -35,5 +35,20 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string></string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>sinaweibosso.2384851066</string>
+				<string>wxbce3f0bff27259cd</string>
+				<string>wb801420561</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

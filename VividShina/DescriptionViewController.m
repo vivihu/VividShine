@@ -7,7 +7,7 @@
 //
 
 #import "DescriptionViewController.h"
-#import "ShareViewController.h"
+#import "VIShareViewController.h"
 
 #define frameONE CGRectMake(74, 420, 171, 43)
 #define frameTWO CGRectMake(74, 440, 171, 43)
@@ -92,7 +92,7 @@
 }
 
 - (IBAction)shareToFriend:(id)sender {
-    ShareViewController *shareVC = [[ShareViewController alloc] initWithNibName:@"ShareViewController" bundle:nil];
+    VIShareViewController *shareVC = [[VIShareViewController alloc] initWithNibName:@"VIShareViewController" bundle:nil];
     
     shareVC.nav = self.navigationController;
     
