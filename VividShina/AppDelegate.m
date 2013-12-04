@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 
+#import "MobClick.h"
 #import <ShareSDK/ShareSDK.h>
 #import "WXApi.h"
 
@@ -31,6 +32,13 @@
     
     
 //    调用registerApp方法来初始化SDK
+//    [MobClick startWithAppkey:@"529e90fd56240b818309d1ed"];
+    [MobClick startWithAppkey:@"529e90fd56240b818309d1ed" reportPolicy:REALTIME channelId:@"unknow"];
+    [MobClick setLogEnabled:YES];
+//    [MobClick updateOnlineConfig];
+//    
+//    NSLog(@"%@",[MobClick getConfigParams]);
+    
     [ShareSDK registerApp:@"df86d0587b1"];
     [self addApplication];
     

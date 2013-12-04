@@ -137,6 +137,8 @@
 		9177FB76184C5864007C4B94 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9177FB75184C5864007C4B94 /* libicucore.dylib */; };
 		9177FB78184C586C007C4B94 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9177FB77184C586C007C4B94 /* libz.1.2.5.dylib */; };
 		9177FB7A184C5885007C4B94 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9177FB79184C5885007C4B94 /* MessageUI.framework */; };
+		9190CE58184EC4D6004B60A6 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9190CE56184EC4D6004B60A6 /* libMobClickLibrary.a */; };
+		9190CE5E184EC4FC004B60A6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9190CE5D184EC4FC004B60A6 /* libz.dylib */; };
 		91915BE5184C251A00B92B16 /* 1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 91915BD1184C251A00B92B16 /* 1_1.png */; };
 		91915BE6184C251A00B92B16 /* 1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 91915BD2184C251A00B92B16 /* 1_2.png */; };
 		91915BE7184C251A00B92B16 /* 1_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 91915BD3184C251A00B92B16 /* 1_3.png */; };
@@ -432,6 +434,9 @@
 		9177FB75184C5864007C4B94 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		9177FB77184C586C007C4B94 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		9177FB79184C5885007C4B94 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9190CE56184EC4D6004B60A6 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		9190CE57184EC4D6004B60A6 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		9190CE5D184EC4FC004B60A6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		91915BD1184C251A00B92B16 /* 1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1_1.png; path = image/1_1.png; sourceTree = "<group>"; };
 		91915BD2184C251A00B92B16 /* 1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1_2.png; path = image/1_2.png; sourceTree = "<group>"; };
 		91915BD3184C251A00B92B16 /* 1_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1_3.png; path = image/1_3.png; sourceTree = "<group>"; };
@@ -546,6 +551,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9190CE5E184EC4FC004B60A6 /* libz.dylib in Frameworks */,
 				91100F5C184DDA7300279859 /* libsqlite3.dylib in Frameworks */,
 				9177FB72184C5856007C4B94 /* QuartzCore.framework in Frameworks */,
 				91100F5A184DD85C00279859 /* Security.framework in Frameworks */,
@@ -555,6 +561,7 @@
 				9177FB7A184C5885007C4B94 /* MessageUI.framework in Frameworks */,
 				91DD26A6184D7C3D00E03F6F /* libWeChatSDK.a in Frameworks */,
 				9177FB78184C586C007C4B94 /* libz.1.2.5.dylib in Frameworks */,
+				9190CE58184EC4D6004B60A6 /* libMobClickLibrary.a in Frameworks */,
 				9177FB76184C5864007C4B94 /* libicucore.dylib in Frameworks */,
 				9177FB74184C585D007C4B94 /* CoreTelephony.framework in Frameworks */,
 				91DD2688184D7C3D00E03F6F /* PinterestConnection.framework in Frameworks */,
@@ -755,6 +762,7 @@
 		915E83A81845CB7500070A20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9190CE5D184EC4FC004B60A6 /* libz.dylib */,
 				91100F5B184DDA7300279859 /* libsqlite3.dylib */,
 				91100F59184DD85C00279859 /* Security.framework */,
 				91100F57184DD84700279859 /* CFNetwork.framework */,
@@ -786,6 +794,8 @@
 				915E83BB1845CB7500070A20 /* Images.xcassets */,
 				91D7E6061846D0610094B70D /* image */,
 				91611FBD184B204200EF6ECF /* 3rd */,
+				9190CE56184EC4D6004B60A6 /* libMobClickLibrary.a */,
+				9190CE57184EC4D6004B60A6 /* MobClick.h */,
 				915E83B01845CB7500070A20 /* Supporting Files */,
 			);
 			path = VividShina;
@@ -1586,6 +1596,7 @@
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/SinaWeiboSDK",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/TencentWeiboSDK",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/WeChatSDK",
+					"/Users/icreative-mini/Desktop/work/VividShina/VividShina",
 				);
 				OTHER_LDFLAGS = (
 					"-lctemplate-ios",
@@ -1637,6 +1648,7 @@
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/SinaWeiboSDK",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/TencentWeiboSDK",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/WeChatSDK",
+					"/Users/icreative-mini/Desktop/work/VividShina/VividShina",
 				);
 				OTHER_LDFLAGS = (
 					"-lctemplate-ios",

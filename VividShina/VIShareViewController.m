@@ -11,6 +11,7 @@
 #import "WXApi.h"
 #import <ShareSDK/ShareSDK.h>
 #import <MailCore/MailCore.h>
+#import "MobClick.h"
 
 @interface VIShareViewController ()
 {
@@ -129,7 +130,12 @@
         return;
     }
     UIView *shadowView = [self addShadowView];
+    
     [_EmailField resignFirstResponder];
+    //    友盟检测代码（记录邮箱）
+    [MobClick event:@"email" label:_EmailField.text];
+    
+    
 
     MCOSMTPSession *smtpSession = [[MCOSMTPSession alloc] init];
     smtpSession.hostname = @"smtp.exmail.qq.com";
@@ -146,11 +152,11 @@
                                                 mailbox:_EmailField.text];
     [[builder header] setFrom:from];
     [[builder header] setTo:@[to]];
-    
-    
-    [[builder header] setSubject:@"my message"];
-    [builder setHTMLBody:@"#琉光主角 唇动心弦#我已找到专属于我的琉光唇色，在节日季，上演绝色致雅，前往@雅诗兰黛 专柜体验琉光主角绚色妆容，亲吻琉光满溢。"];
-    
+
+/**************************** 邮  件  内  容 *******************************/
+    [[builder header] setSubject:@"琉光主角唇膏"];
+    [builder setHTMLBody:@"我已找到专属于我的琉光唇色，在节日季，上演绝色致雅，前往@雅诗兰黛 专柜体验琉光主角绚色妆容，亲吻琉光满溢。"];
+/***************************我 是 一 条 分 割 线********************************/
     NSData * rfc822Data = [builder data];
     MCOSMTPSendOperation *sendOperation =
     [smtpSession sendOperationWithData:rfc822Data];
@@ -190,16 +196,18 @@
     
     
     id<ISSContent> publishContent = nil;
-    id<ISSCAttachment> image = [ShareSDK imageWithData:[NSData dataWithContentsOfFile:self.currentImagePath] fileName:@"share.jpg" mimeType:@"image/jpeg"];
-    
+    //  设置日期格式
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"HH:mm:ss"];
     NSString *dateStr = [dateFormat stringFromDate:date];
+    //  分享内容
     NSString *contentString = [NSString stringWithFormat:@"#琉光主角 唇动心弦#我已找到专属于我的琉光唇色，在节日季，上演绝色致雅，前往@雅诗兰黛 专柜体验琉光主角绚色妆容，亲吻琉光满溢。       %@",dateStr];
     NSString *titleString   = @"琉光主角唇膏";
     NSString *urlString     = nil;
-    NSString *description   = contentString;
+    NSString *description   = nil;
+    id<ISSCAttachment> image = [ShareSDK imageWithData:[NSData dataWithContentsOfFile:self.currentImagePath] fileName:@"share.jpg" mimeType:@"image/jpeg"];
+
     publishContent = [ShareSDK content:contentString
                         defaultContent:contentString
                                  image:image
