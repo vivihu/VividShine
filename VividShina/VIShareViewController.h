@@ -12,10 +12,12 @@
 {
     IBOutlet UIScrollView *_scrollView;
     IBOutlet UITextField *_EmailField;
+    NSURL *_sendURL;
+    NSOperationQueue *_mainQueue;
 }
 
 @property (nonatomic, strong) UINavigationController *nav;
-@property (nonatomic, strong) NSString *currentImagePath;
+@property (nonatomic) NSInteger currentIndex;
 
 - (IBAction)shareToFriend:(id)sender;
 

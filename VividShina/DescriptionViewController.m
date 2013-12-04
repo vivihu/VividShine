@@ -17,7 +17,6 @@
 @interface DescriptionViewController ()
 {
     UIButton *_backBtn;
-    NSString *_imagePath;
 }
 
 @end
@@ -92,8 +91,6 @@
         default:
             break;
     }
-    NSString *str = [NSString stringWithFormat:@"share%d",self.myStyle];
-    _imagePath = [[NSBundle mainBundle] pathForResource:str ofType:@"jpg"];
     
     [_resultImage setImage:[UIImage imageWithContentsOfFile:imgPath]];
 }
@@ -102,7 +99,7 @@
     VIShareViewController *shareVC = [[VIShareViewController alloc] initWithNibName:@"VIShareViewController" bundle:nil];
     
     shareVC.nav = self.navigationController;
-    shareVC.currentImagePath = _imagePath;
+    shareVC.currentIndex = self.myStyle;
     
     [self presentViewController:shareVC animated:YES completion:^{
         ;

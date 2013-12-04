@@ -113,6 +113,15 @@
         return;
     _indexTag = currentBtn.tag;
     
+    
+    [UIView animateWithDuration:0.3f animations:^{
+        _colorMouth.alpha = 0;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.7f
+                         animations:^{
+                             _colorMouth.alpha = 1;
+                         }];
+    }];
     [UIView animateWithDuration:0.3f
                      animations:^{
                          for (UIButton *btn in _buttons) {
@@ -125,8 +134,9 @@
                              rect.origin.y = kNormalH;
                              [btn setFrame:rect];
                          }
+                     }completion:^(BOOL finished) {
+                         ;
                      }];
-    
     [self configImage:currentBtn.tag-199];
 }
 
@@ -140,7 +150,7 @@
     _colorWord.text = [[_colors objectAtIndex:indexTag-1]objectAtIndex:0];
     [_colorWord sizeToFit];
     CGRect rectNOW = _colorWord.frame;
-    [_colorWord setFrame:CGRectMake(396 - rectNOW.size.width - 44, 670, rectNOW.size.width + 44, 63)];    
+    [_colorWord setFrame:CGRectMake(396 - rectNOW.size.width - 44, 670, rectNOW.size.width + 44, 63)];
 }
 
 @end

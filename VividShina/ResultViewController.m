@@ -31,10 +31,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    [self textTwinkling];
+
     //   ios7 下调用
     [self setLabelText];
-    [self textTwinkling];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,17 +66,20 @@
     _YZYY.text  =   [NSString stringWithFormat:@"%d",[[self.dataDic objectForKey:@"sec"] intValue] * 20];
 }
 
+
 - (void)textTwinkling
 {
-    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse animations:^{
-        if (_texts.alpha == 1) {
-            [_texts setAlpha:0.3];
-        }else if (_texts.alpha == 0.3){
-            [_texts setAlpha:1];
-        }
-    } completion:^(BOOL finished) {
-        ;
-    }];
+    [_texts.layer removeAllAnimations];
+    CABasicAnimation *theAnimation;
+    theAnimation=[CABasicAnimation animationWithKeyPath:@"opacity"];
+    theAnimation.delegate = self;
+    theAnimation.duration = 1;
+    theAnimation.repeatCount = INT_MAX;
+    theAnimation.removedOnCompletion = FALSE;
+    theAnimation.autoreverses = YES;
+    theAnimation.fromValue = @0.3f;
+    theAnimation.toValue = @1.0f;
+    [_texts.layer addAnimation:theAnimation forKey:@"opacity"];
 }
 
 - (MyStyle )CalculateTheStyle

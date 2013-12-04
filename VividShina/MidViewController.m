@@ -65,7 +65,7 @@
     UIButton *btn = (UIButton *)sender;
     [btn setSelected:YES];
 
-    
+
     [self configIndexButton:btn.tag];
 }
 
