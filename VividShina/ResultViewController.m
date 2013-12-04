@@ -34,6 +34,7 @@
     
     //   ios7 下调用
     [self setLabelText];
+    [self textTwinkling];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,6 +64,19 @@
     _FYNQ.text  =   [NSString stringWithFormat:@"%d",[[self.dataDic objectForKey:@"fourth"] intValue] * 20];
     _RHQT.text  =   [NSString stringWithFormat:@"%d",[[self.dataDic objectForKey:@"first"] intValue] * 20];
     _YZYY.text  =   [NSString stringWithFormat:@"%d",[[self.dataDic objectForKey:@"sec"] intValue] * 20];
+}
+
+- (void)textTwinkling
+{
+    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse animations:^{
+        if (_texts.alpha == 1) {
+            [_texts setAlpha:0.3];
+        }else if (_texts.alpha == 0.3){
+            [_texts setAlpha:1];
+        }
+    } completion:^(BOOL finished) {
+        ;
+    }];
 }
 
 - (MyStyle )CalculateTheStyle

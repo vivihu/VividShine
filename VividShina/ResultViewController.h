@@ -15,6 +15,7 @@
     IBOutlet UILabel *_FYNQ;
     IBOutlet UILabel *_RHQT;
     IBOutlet UILabel *_YZYY;
+    IBOutlet UILabel *_texts;
 }
 
 @property (nonatomic,strong) NSDictionary *dataDic;

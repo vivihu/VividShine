@@ -100,15 +100,7 @@
         default:
             break;
     }
-    if (!success) {
-        UIAlertView *view =
-        [[UIAlertView alloc] initWithTitle:title
-                                   message:@"分享失败"
-                                  delegate:nil
-                         cancelButtonTitle:@"知道了"
-                         otherButtonTitles:nil];
-        [view show];
-    }else {
+    if (success) {
         UIAlertView *view =
         [[UIAlertView alloc] initWithTitle:title
                                    message:@"分享成功！"
@@ -117,6 +109,15 @@
                          otherButtonTitles:nil];
         [view show];
     }
+//    else {
+//        UIAlertView *view =
+//        [[UIAlertView alloc] initWithTitle:title
+//                                   message:@"分享失败"
+//                                  delegate:nil
+//                         cancelButtonTitle:@"知道了"
+//                         otherButtonTitles:nil];
+//        [view show];
+//    }
 }
 
 - (IBAction)shareToEmail:(id)sender {
@@ -153,10 +154,13 @@
     [[builder header] setFrom:from];
     [[builder header] setTo:@[to]];
 
-/**************************** 邮  件  内  容 *******************************/
+/********************* 邮  件  内  容 *******************************/
+    NSData *data = [NSData dataWithContentsOfFile:self.currentImagePath];
     [[builder header] setSubject:@"琉光主角唇膏"];
-    [builder setHTMLBody:@"我已找到专属于我的琉光唇色，在节日季，上演绝色致雅，前往@雅诗兰黛 专柜体验琉光主角绚色妆容，亲吻琉光满溢。"];
-/***************************我 是 一 条 分 割 线********************************/
+//    [builder setAttachments:@[data]];
+    NSString *path = [NSString stringWithFormat:@"<div><img src=\"%@\"  alt="" /> Here's the message I need to send.</div>",self.currentImagePath];
+    [builder setHTMLBody:path];
+/*******************我 是 一 条 分 割 线********************************/
     NSData * rfc822Data = [builder data];
     MCOSMTPSendOperation *sendOperation =
     [smtpSession sendOperationWithData:rfc822Data];
@@ -243,11 +247,14 @@
                              id<ISSPlatformShareInfo> statusInfo,
                              id<ICMErrorInfo> error,
                              BOOL end) {
+//                        NSLog(@"%@,%d,%d",[error errorDescription],[error errorCode],[error errorLevel]);
                         if (state == SSResponseStateSuccess) {
                             [self resultTip:type withResult:YES];
                         }
                         else if (state == SSResponseStateFail) {
                             [self resultTip:type withResult:NO];
+                        }else if (state == SSResponseStateCancel) {
+                            ;// 居然没有取消这种情况
                         }
                     }];
 }

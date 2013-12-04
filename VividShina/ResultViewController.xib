@@ -11,6 +11,7 @@
                 <outlet property="_RHQT" destination="p4V-mb-Yfb" id="R5w-Iv-DZn"/>
                 <outlet property="_SSGX" destination="uv2-nb-pxd" id="P4R-rH-uwA"/>
                 <outlet property="_YZYY" destination="BEQ-YJ-POq" id="BbK-rS-PsR"/>
+                <outlet property="_texts" destination="hoz-5U-lpc" id="VG1-1I-d64"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
         </placeholder>
@@ -134,16 +135,20 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jkc-YA-wFe">
-                    <rect key="frame" x="890" y="320" width="48" height="128"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Q3u-qR-262">
+                    <rect key="frame" x="592" y="325" width="290" height="118"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="jt.png">
+                    <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="nextStep:" destination="-1" eventType="touchUpInside" id="v4Z-UI-6xE"/>
+                        <action selector="nextStep:" destination="-1" eventType="touchUpInside" id="Bq6-TE-2Kz"/>
                     </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jt.png" id="Lhe-ph-1la">
+                    <rect key="frame" x="890" y="320" width="48" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
