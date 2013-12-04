@@ -113,7 +113,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="29"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder=" 发送到您的邮箱" minimumFontSize="17" id="jSO-83-oi4">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder=" 发送到您的邮箱" minimumFontSize="17" clearButtonMode="always" id="jSO-83-oi4">
                             <rect key="frame" x="136" y="210" width="355" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>

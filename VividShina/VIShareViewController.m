@@ -10,7 +10,7 @@
 #import "ShareDoneViewController.h"
 #import "WXApi.h"
 #import <ShareSDK/ShareSDK.h>
-
+#import <MailCore/MailCore.h>
 
 @interface VIShareViewController ()
 {
@@ -56,6 +56,14 @@
 
 
 #pragma mark - custom method
+- (UIView *)addShadowView
+{
+    UIView *shadow = [[UIView alloc] initWithFrame:self.view.bounds];
+    shadow.backgroundColor = [UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.5f];
+    [self.view addSubview:shadow];
+    return shadow;
+}
+
 - (void)enterShareDoneViewController
 {
     if (!_shareDoneVC) {
@@ -65,7 +73,13 @@
     [self closeCurrentViewController:nil];
 }
 
-- (void)resultTip:(ShareType)type withResult:(id<ICMErrorInfo>)error
+-(BOOL)isValidateEmail:(NSString *)email {
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:email];
+}
+
+- (void)resultTip:(ShareType)type withResult:(BOOL)success
 {
     NSString *title = nil;
     switch (type) {
@@ -85,7 +99,7 @@
         default:
             break;
     }
-    if (error) {
+    if (!success) {
         UIAlertView *view =
         [[UIAlertView alloc] initWithTitle:title
                                    message:@"分享失败"
@@ -109,9 +123,46 @@
 }
 
 - (IBAction)sendEmail:(id)sender {
+    if (![self isValidateEmail:_EmailField.text]) {
+        UIAlertView *unvalidateEmail = [[UIAlertView alloc] initWithTitle:@"错误" message:@"请输入正确的邮件格式" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+        [unvalidateEmail show];
+        return;
+    }
+    UIView *shadowView = [self addShadowView];
+    [_EmailField resignFirstResponder];
+
+    MCOSMTPSession *smtpSession = [[MCOSMTPSession alloc] init];
+    smtpSession.hostname = @"smtp.exmail.qq.com";
+    smtpSession.port = 465;
+    smtpSession.username = @"huweiwei@i-creative.cn";
+    smtpSession.password = @"hww0617";
+    smtpSession.authType = MCOAuthTypeSASLPlain;
+    smtpSession.connectionType = MCOConnectionTypeTLS;
     
-    ;
-    [self enterShareDoneViewController];
+    MCOMessageBuilder *builder = [[MCOMessageBuilder alloc] init];
+    MCOAddress *from = [MCOAddress addressWithDisplayName:@"wei"
+                                                  mailbox:@"huweiwei@i-creative.cn"];
+    MCOAddress *to = [MCOAddress addressWithDisplayName:nil
+                                                mailbox:_EmailField.text];
+    [[builder header] setFrom:from];
+    [[builder header] setTo:@[to]];
+    
+    
+    [[builder header] setSubject:@"my message"];
+    [builder setHTMLBody:@"#琉光主角 唇动心弦#我已找到专属于我的琉光唇色，在节日季，上演绝色致雅，前往@雅诗兰黛 专柜体验琉光主角绚色妆容，亲吻琉光满溢。"];
+    
+    NSData * rfc822Data = [builder data];
+    MCOSMTPSendOperation *sendOperation =
+    [smtpSession sendOperationWithData:rfc822Data];
+    [sendOperation start:^(NSError *error) {
+        if(error) {
+            [self resultTip:ShareTypeMail withResult:NO];
+        } else {
+            [self resultTip:ShareTypeMail withResult:YES];
+        }
+        
+        [shadowView removeFromSuperview];
+    }];
 }
 
 
@@ -185,10 +236,10 @@
                              id<ICMErrorInfo> error,
                              BOOL end) {
                         if (state == SSResponseStateSuccess) {
-                            [self resultTip:type withResult:error];
+                            [self resultTip:type withResult:YES];
                         }
                         else if (state == SSResponseStateFail) {
-                            [self resultTip:type withResult:error];
+                            [self resultTip:type withResult:NO];
                         }
                     }];
 }

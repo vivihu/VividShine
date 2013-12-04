@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91100F56184DD84100279859 /* libMailCore-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91100F4D184DD7FC00279859 /* libMailCore-ios.a */; };
+		91100F58184DD84700279859 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91100F57184DD84700279859 /* CFNetwork.framework */; };
+		91100F5A184DD85C00279859 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91100F59184DD85C00279859 /* Security.framework */; };
+		91100F5C184DDA7300279859 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91100F5B184DDA7300279859 /* libsqlite3.dylib */; };
 		913B81881848296E0033E762 /* DescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 913B81861848296E0033E762 /* DescriptionViewController.m */; };
 		913B81891848296E0033E762 /* DescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913B81871848296E0033E762 /* DescriptionViewController.xib */; };
 		913B81C018482C1E0033E762 /* ball01.png in Resources */ = {isa = PBXBuildFile; fileRef = 913B819418482C1E0033E762 /* ball01.png */; };
@@ -212,13 +216,7 @@
 		91DD269A184D7C3D00E03F6F /* ShareSDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91DD2653184D7C3C00E03F6F /* ShareSDKLocalizable.strings */; };
 		91DD269B184D7C3D00E03F6F /* Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91DD2655184D7C3C00E03F6F /* Resource.bundle */; };
 		91DD269C184D7C3D00E03F6F /* ShareSDKCoreService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DD2656184D7C3C00E03F6F /* ShareSDKCoreService.framework */; };
-		91DD269D184D7C3D00E03F6F /* GoogleOpenSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DD265A184D7C3C00E03F6F /* GoogleOpenSource.framework */; };
-		91DD269E184D7C3D00E03F6F /* GooglePlus.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91DD265B184D7C3C00E03F6F /* GooglePlus.bundle */; };
-		91DD269F184D7C3D00E03F6F /* GooglePlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DD265C184D7C3C00E03F6F /* GooglePlus.framework */; };
-		91DD26A0184D7C3D00E03F6F /* Pinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DD265E184D7C3D00E03F6F /* Pinterest.framework */; };
-		91DD26A1184D7C3D00E03F6F /* PinterestSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 91DD2660184D7C3D00E03F6F /* PinterestSDKResources.bundle */; };
 		91DD26A2184D7C3D00E03F6F /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DD2662184D7C3D00E03F6F /* TencentOpenAPI.framework */; };
-		91DD26A3184D7C3D00E03F6F /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DD2664184D7C3D00E03F6F /* RennSDK.framework */; };
 		91DD26A4184D7C3D00E03F6F /* libSinaWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DD2666184D7C3D00E03F6F /* libSinaWeiboSDK.a */; };
 		91DD26A5184D7C3D00E03F6F /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DD2669184D7C3D00E03F6F /* libWeiboSDK.a */; };
 		91DD26A6184D7C3D00E03F6F /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DD266D184D7C3D00E03F6F /* libWeChatSDK.a */; };
@@ -239,6 +237,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		91100F4A184DD7FC00279859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C64EA537169E772200778456;
+			remoteInfo = "static mailcore2 osx";
+		};
+		91100F4C184DD7FC00279859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C6BA2C191705F4E6003F0E9E;
+			remoteInfo = "static mailcore2 ios";
+		};
+		91100F4E184DD7FC00279859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C64EA78C169F259200778456;
+			remoteInfo = tests;
+		};
+		91100F50184DD7FC00279859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C6A81B911706840C00882C15;
+			remoteInfo = "test-ios";
+		};
+		91100F52184DD7FC00279859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C6BD288D170BD71100A91AC1;
+			remoteInfo = "mailcore osx";
+		};
+		91100F54184DD81800279859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C6BA2B091705F4E6003F0E9E;
+			remoteInfo = "static mailcore2 ios";
+		};
 		915E83C61845CB7500070A20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 915E839E1845CB7400070A20 /* Project object */;
@@ -249,6 +289,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91100F42184DD7FA00279859 /* mailcore2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mailcore2.xcodeproj; path = "../mailcore2/build-mac/mailcore2.xcodeproj"; sourceTree = "<group>"; };
+		91100F57184DD84700279859 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		91100F59184DD85C00279859 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		91100F5B184DDA7300279859 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		913B81851848296E0033E762 /* DescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionViewController.h; sourceTree = "<group>"; };
 		913B81861848296E0033E762 /* DescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionViewController.m; sourceTree = "<group>"; };
 		913B81871848296E0033E762 /* DescriptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DescriptionViewController.xib; sourceTree = "<group>"; };
@@ -472,13 +516,7 @@
 		91DD2655184D7C3C00E03F6F /* Resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resource.bundle; sourceTree = "<group>"; };
 		91DD2656184D7C3C00E03F6F /* ShareSDKCoreService.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKCoreService.framework; sourceTree = "<group>"; };
 		91DD2657184D7C3C00E03F6F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/ShareSDKLocalizable.strings"; sourceTree = "<group>"; };
-		91DD265A184D7C3C00E03F6F /* GoogleOpenSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleOpenSource.framework; sourceTree = "<group>"; };
-		91DD265B184D7C3C00E03F6F /* GooglePlus.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlus.bundle; sourceTree = "<group>"; };
-		91DD265C184D7C3C00E03F6F /* GooglePlus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlus.framework; sourceTree = "<group>"; };
-		91DD265E184D7C3D00E03F6F /* Pinterest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pinterest.framework; sourceTree = "<group>"; };
-		91DD2660184D7C3D00E03F6F /* PinterestSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PinterestSDKResources.bundle; sourceTree = "<group>"; };
 		91DD2662184D7C3D00E03F6F /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
-		91DD2664184D7C3D00E03F6F /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
 		91DD2666184D7C3D00E03F6F /* libSinaWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSinaWeiboSDK.a; sourceTree = "<group>"; };
 		91DD2667184D7C3D00E03F6F /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
 		91DD2669184D7C3D00E03F6F /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
@@ -508,14 +546,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91100F5C184DDA7300279859 /* libsqlite3.dylib in Frameworks */,
+				9177FB72184C5856007C4B94 /* QuartzCore.framework in Frameworks */,
+				91100F5A184DD85C00279859 /* Security.framework in Frameworks */,
+				91100F58184DD84700279859 /* CFNetwork.framework in Frameworks */,
+				91100F56184DD84100279859 /* libMailCore-ios.a in Frameworks */,
 				91DD269C184D7C3D00E03F6F /* ShareSDKCoreService.framework in Frameworks */,
 				9177FB7A184C5885007C4B94 /* MessageUI.framework in Frameworks */,
 				91DD26A6184D7C3D00E03F6F /* libWeChatSDK.a in Frameworks */,
 				9177FB78184C586C007C4B94 /* libz.1.2.5.dylib in Frameworks */,
-				91DD26A3184D7C3D00E03F6F /* RennSDK.framework in Frameworks */,
 				9177FB76184C5864007C4B94 /* libicucore.dylib in Frameworks */,
 				9177FB74184C585D007C4B94 /* CoreTelephony.framework in Frameworks */,
-				9177FB72184C5856007C4B94 /* QuartzCore.framework in Frameworks */,
 				91DD2688184D7C3D00E03F6F /* PinterestConnection.framework in Frameworks */,
 				91DD2693184D7C3D00E03F6F /* TencentWeiboConnection.framework in Frameworks */,
 				9177FB70184C583F007C4B94 /* SystemConfiguration.framework in Frameworks */,
@@ -523,7 +564,6 @@
 				91DD2699184D7C3D00E03F6F /* AGCommon.framework in Frameworks */,
 				91DD2685184D7C3D00E03F6F /* KaiXinConnection.framework in Frameworks */,
 				91DD2680184D7C3D00E03F6F /* FlickrConnection.framework in Frameworks */,
-				91DD26A0184D7C3D00E03F6F /* Pinterest.framework in Frameworks */,
 				91DD2683184D7C3D00E03F6F /* InstapaperConnection.framework in Frameworks */,
 				915E83AC1845CB7500070A20 /* CoreGraphics.framework in Frameworks */,
 				91DD26AE184D7C3D00E03F6F /* ShareSDKiPhoneDefaultShareViewUI.framework in Frameworks */,
@@ -546,7 +586,6 @@
 				91DD2696184D7C3D00E03F6F /* VKontakteConnection.framework in Frameworks */,
 				91DD268F184D7C3D00E03F6F /* SMSConnection.framework in Frameworks */,
 				91DD268A184D7C3D00E03F6F /* PrintConnection.framework in Frameworks */,
-				91DD269D184D7C3D00E03F6F /* GoogleOpenSource.framework in Frameworks */,
 				91DD26A7184D7C3D00E03F6F /* ShareSDK.framework in Frameworks */,
 				91DD267E184D7C3D00E03F6F /* EverNoteConnection.framework in Frameworks */,
 				91DD2691184D7C3D00E03F6F /* SohuWeiboConnection.framework in Frameworks */,
@@ -555,7 +594,6 @@
 				91DD26AC184D7C3D00E03F6F /* ShareSDKiPhoneAppRecommendShareViewUI.framework in Frameworks */,
 				91DD268D184D7C3D00E03F6F /* RenRenConnection.framework in Frameworks */,
 				91DD267F184D7C3D00E03F6F /* FacebookConnection.framework in Frameworks */,
-				91DD269F184D7C3D00E03F6F /* GooglePlus.framework in Frameworks */,
 				91DD26A9184D7C3D00E03F6F /* ShareSDKiPadDefaultShareViewUI.framework in Frameworks */,
 				91DD268B184D7C3D00E03F6F /* QQConnection.framework in Frameworks */,
 				91DD267B184D7C3D00E03F6F /* CopyConnection.framework in Frameworks */,
@@ -578,6 +616,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		91100F43184DD7FA00279859 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91100F4B184DD7FC00279859 /* libMailCore.a */,
+				91100F4D184DD7FC00279859 /* libMailCore-ios.a */,
+				91100F4F184DD7FC00279859 /* tests */,
+				91100F51184DD7FC00279859 /* test-ios.app */,
+				91100F53184DD7FC00279859 /* MailCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		913B81F1184865440033E762 /* Lipstick */ = {
 			isa = PBXGroup;
 			children = (
@@ -685,6 +735,7 @@
 		915E839D1845CB7400070A20 = {
 			isa = PBXGroup;
 			children = (
+				91100F42184DD7FA00279859 /* mailcore2.xcodeproj */,
 				915E83AF1845CB7500070A20 /* VividShina */,
 				915E83C81845CB7500070A20 /* VividShinaTests */,
 				915E83A81845CB7500070A20 /* Frameworks */,
@@ -704,6 +755,9 @@
 		915E83A81845CB7500070A20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91100F5B184DDA7300279859 /* libsqlite3.dylib */,
+				91100F59184DD85C00279859 /* Security.framework */,
+				91100F57184DD84700279859 /* CFNetwork.framework */,
 				9177FB79184C5885007C4B94 /* MessageUI.framework */,
 				9177FB77184C586C007C4B94 /* libz.1.2.5.dylib */,
 				9177FB75184C5864007C4B94 /* libicucore.dylib */,
@@ -1008,42 +1062,12 @@
 		91DD2658184D7C3C00E03F6F /* Extend */ = {
 			isa = PBXGroup;
 			children = (
-				91DD2659184D7C3C00E03F6F /* GooglePlusSDK */,
-				91DD265D184D7C3D00E03F6F /* Pinterest.embeddedframework */,
 				91DD2661184D7C3D00E03F6F /* QQConnectSDK */,
-				91DD2663184D7C3D00E03F6F /* RenRenSDK */,
 				91DD2665184D7C3D00E03F6F /* SinaWeiboSDK */,
 				91DD2668184D7C3D00E03F6F /* TencentWeiboSDK */,
 				91DD266C184D7C3D00E03F6F /* WeChatSDK */,
 			);
 			path = Extend;
-			sourceTree = "<group>";
-		};
-		91DD2659184D7C3C00E03F6F /* GooglePlusSDK */ = {
-			isa = PBXGroup;
-			children = (
-				91DD265A184D7C3C00E03F6F /* GoogleOpenSource.framework */,
-				91DD265B184D7C3C00E03F6F /* GooglePlus.bundle */,
-				91DD265C184D7C3C00E03F6F /* GooglePlus.framework */,
-			);
-			path = GooglePlusSDK;
-			sourceTree = "<group>";
-		};
-		91DD265D184D7C3D00E03F6F /* Pinterest.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				91DD265E184D7C3D00E03F6F /* Pinterest.framework */,
-				91DD265F184D7C3D00E03F6F /* Resources */,
-			);
-			path = Pinterest.embeddedframework;
-			sourceTree = "<group>";
-		};
-		91DD265F184D7C3D00E03F6F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				91DD2660184D7C3D00E03F6F /* PinterestSDKResources.bundle */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		91DD2661184D7C3D00E03F6F /* QQConnectSDK */ = {
@@ -1052,14 +1076,6 @@
 				91DD2662184D7C3D00E03F6F /* TencentOpenAPI.framework */,
 			);
 			path = QQConnectSDK;
-			sourceTree = "<group>";
-		};
-		91DD2663184D7C3D00E03F6F /* RenRenSDK */ = {
-			isa = PBXGroup;
-			children = (
-				91DD2664184D7C3D00E03F6F /* RennSDK.framework */,
-			);
-			path = RenRenSDK;
 			sourceTree = "<group>";
 		};
 		91DD2665184D7C3D00E03F6F /* SinaWeiboSDK */ = {
@@ -1121,6 +1137,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				91100F55184DD81800279859 /* PBXTargetDependency */,
 			);
 			name = VividShina;
 			productName = VividShina;
@@ -1170,6 +1187,12 @@
 			mainGroup = 915E839D1845CB7400070A20;
 			productRefGroup = 915E83A71845CB7500070A20 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 91100F43184DD7FA00279859 /* Products */;
+					ProjectRef = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				915E83A51845CB7400070A20 /* VividShina */,
@@ -1177,6 +1200,44 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		91100F4B184DD7FC00279859 /* libMailCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMailCore.a;
+			remoteRef = 91100F4A184DD7FC00279859 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		91100F4D184DD7FC00279859 /* libMailCore-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libMailCore-ios.a";
+			remoteRef = 91100F4C184DD7FC00279859 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		91100F4F184DD7FC00279859 /* tests */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = tests;
+			remoteRef = 91100F4E184DD7FC00279859 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		91100F51184DD7FC00279859 /* test-ios.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "test-ios.app";
+			remoteRef = 91100F50184DD7FC00279859 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		91100F53184DD7FC00279859 /* MailCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MailCore.framework;
+			remoteRef = 91100F52184DD7FC00279859 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		915E83A41845CB7400070A20 /* Resources */ = {
@@ -1302,7 +1363,6 @@
 				91915BF7184C251A00B92B16 /* pack_kv11.jpg in Resources */,
 				913B81D218482C1E0033E762 /* ball13.png in Resources */,
 				914ACCAF1849D7290076839B /* mouth8.png in Resources */,
-				91DD269E184D7C3D00E03F6F /* GooglePlus.bundle in Resources */,
 				914ACCA71849D7290076839B /* cungao_Left.jpg in Resources */,
 				913B81E618482C1E0033E762 /* q1.png in Resources */,
 				91915BF2184C251A00B92B16 /* pack_kv4.jpg in Resources */,
@@ -1319,7 +1379,6 @@
 				913B81DA18482C1E0033E762 /* ball17.png in Resources */,
 				913B81D018482C1E0033E762 /* ball12.png in Resources */,
 				91915BEE184C251A00B92B16 /* 3_2.png in Resources */,
-				91DD26A1184D7C3D00E03F6F /* PinterestSDKResources.bundle in Resources */,
 				913B81DF18482C1E0033E762 /* ball19s.png in Resources */,
 				914ACCA41849D7290076839B /* CG10.png in Resources */,
 				91915BED184C251A00B92B16 /* 3_1.png in Resources */,
@@ -1385,6 +1444,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		91100F55184DD81800279859 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "static mailcore2 ios";
+			targetProxy = 91100F54184DD81800279859 /* PBXContainerItemProxy */;
+		};
 		915E83C71845CB7500070A20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 915E83A51845CB7400070A20 /* VividShina */;
@@ -1501,6 +1565,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LIBRARY = "libstdc++";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Connection",
@@ -1522,8 +1587,23 @@
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/TencentWeiboSDK",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/WeChatSDK",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-lctemplate-ios",
+					"-letpan-ios",
+					"-licudata",
+					"-licui18n",
+					"-licuuc",
+					"-lxml2",
+					"-lsasl2",
+					"-liconv",
+					"-ltidy",
+					"-lz",
+					"-lstdc++",
+					"-stdlib=libstdc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1535,6 +1615,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LIBRARY = "libstdc++";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1557,9 +1638,24 @@
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/TencentWeiboSDK",
 					"/Users/icreative-mini/Desktop/work/VividShina/VividShina/3rd/ShareSDK_v2.6.1/Extend/WeChatSDK",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-lctemplate-ios",
+					"-letpan-ios",
+					"-licudata",
+					"-licui18n",
+					"-licuuc",
+					"-lxml2",
+					"-lsasl2",
+					"-liconv",
+					"-ltidy",
+					"-lz",
+					"-lstdc++",
+					"-stdlib=libstdc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
