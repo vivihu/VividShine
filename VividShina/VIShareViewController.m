@@ -21,10 +21,10 @@
     UIAlertView *_successView;
     NSArray *_weixinImages;
     NSArray *_event;
+    UIActivityIndicatorView *_activeView;
 }
 @end
 
-#define kActiveTag 3000
 
 @implementation VIShareViewController
 
@@ -82,14 +82,13 @@
     shadow.backgroundColor = [UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.5f];
     [self.view addSubview:shadow];
     
-    UIActivityIndicatorView *activeView = [[UIActivityIndicatorView alloc] init];
-    [activeView setTag:kActiveTag];
-    activeView.center = CGPointMake(1024/2, 768/2);
-    [activeView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    [self.view addSubview:activeView];
-    [activeView startAnimating];
+    _activeView = [[UIActivityIndicatorView alloc] init];
+    _activeView.center = CGPointMake(1024/2, 768/2);
+    [_activeView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [self.view addSubview:_activeView];
+    [_activeView startAnimating];
 
-    return activeView;
+    return shadow;
 }
 
 - (void)enterShareDoneViewController
@@ -192,19 +191,28 @@
     
     NSURL *url = [NSURL URLWithString:@"https://ebm.cheetahmail.com/api/login1?name=el_cn@api&cleartext=Cheetah!"];
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:url] queue:_mainQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        if (connectionError)
+        NSLog(@"connectionError === %@",connectionError);
+        if (connectionError){
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [_activeView setHidesWhenStopped:YES];
+                [shadow removeFromSuperview];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"出错了" message:nil delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+                [alert show];
+            });
             return ;
+        }
         
         NSString *urlStr = [NSString stringWithFormat:@"https://ebm.cheetahmail.com/ebm/ebmtrigger1?aid=2077265562&email=%@&eid=%@",_EmailField.text,_event[self.currentIndex - 1]];
         NSURLRequest *urlReq = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
         [NSURLConnection sendAsynchronousRequest:urlReq queue:_mainQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-            UIActivityIndicatorView *active = (UIActivityIndicatorView *)[self.view viewWithTag:kActiveTag];
-            [active stopAnimating];
-            [active removeFromSuperview];
+            [_activeView setHidesWhenStopped:YES];
             [shadow removeFromSuperview];
-
-            if (!connectionError)
-                [self resultTip:ShareTypeMail withResult:YES];
+            NSLog(@"%d",[NSThread isMainThread]);
+            if (!connectionError) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self resultTip:ShareTypeMail withResult:YES];
+                });
+            }
         }];
     }];
 }
@@ -325,7 +333,7 @@
                             [self resultTip:type withResult:YES];
                         }
                         else if (state == SSResponseStateFail) {
-                            [self resultTip:type withResult:NO];
+//                            [self resultTip:type withResult:NO];
                         }else if (state == SSResponseStateCancel) {
                             ;// 仅微信取消可以调到
                         }
