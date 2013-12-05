@@ -35,10 +35,8 @@
 //    [MobClick startWithAppkey:@"529e90fd56240b818309d1ed"];
     [MobClick startWithAppkey:@"529e90fd56240b818309d1ed" reportPolicy:REALTIME channelId:@"unknow"];
     [MobClick setLogEnabled:YES];
-//    [MobClick updateOnlineConfig];
-//    
-//    NSLog(@"%@",[MobClick getConfigParams]);
-    
+
+//  调用ShareSDK方法来初始化SDK
     [ShareSDK registerApp:@"df86d0587b1"];
     [self addApplication];
     

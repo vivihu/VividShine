@@ -8,6 +8,7 @@
 
 #import "VIShareViewController.h"
 #import "ShareDoneViewController.h"
+
 #import "WXApi.h"
 #import <ShareSDK/ShareSDK.h>
 //#import <MailCore/MailCore.h>
@@ -19,8 +20,11 @@
     ShareDoneViewController *_shareDoneVC;
     UIAlertView *_successView;
     NSArray *_weixinImages;
+    NSArray *_event;
 }
 @end
+
+#define kActiveTag 3000
 
 @implementation VIShareViewController
 
@@ -39,12 +43,18 @@
     // Do any additional setup after loading the view from its nib.
     _mainQueue = [[NSOperationQueue alloc] init];
     [_mainQueue setMaxConcurrentOperationCount:5];
-    _sendURL = [[NSURL alloc] init];
+    
     _weixinImages = [[NSArray alloc] initWithObjects:
     @"http://www.el-lady.com.cn/vividshine2013/app/share1.html",
     @"http://www.el-lady.com.cn/vividshine2013/app/share4.html",
     @"http://www.el-lady.com.cn/vividshine2013/app/share3.html",
     @"http://www.el-lady.com.cn/vividshine2013/app/share2.html",nil];
+    
+    _event = [[NSArray alloc] initWithObjects:
+              @"234942",
+              @"234963",
+              @"234982",
+              @"234962", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,7 +81,15 @@
     UIView *shadow = [[UIView alloc] initWithFrame:self.view.bounds];
     shadow.backgroundColor = [UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.5f];
     [self.view addSubview:shadow];
-    return shadow;
+    
+    UIActivityIndicatorView *activeView = [[UIActivityIndicatorView alloc] init];
+    [activeView setTag:kActiveTag];
+    activeView.center = CGPointMake(1024/2, 768/2);
+    [activeView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [self.view addSubview:activeView];
+    [activeView startAnimating];
+
+    return activeView;
 }
 
 - (void)enterShareDoneViewController
@@ -83,7 +101,7 @@
     [self closeCurrentViewController:nil];
 }
 
--(BOOL)isValidateEmail:(NSString *)email {
+- (BOOL)isValidateEmail:(NSString *)email {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:email];
@@ -131,28 +149,27 @@
 
 - (void)requestURL:(NSURL *)url
 {
-    UIView *shadowView = [self addShadowView];
-
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     
     [request setHTTPMethod:@"GET"];
-//    [request setAllHTTPHeaderFields:@{@"Accepts-Encoding": @"gzip", @"Accept": @"application/json"}];
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:_mainQueue
-                           completionHandler:^(NSURLResponse *response, NSData *responseData, NSError *error) {
-                               NSHTTPURLResponse *urlResponse = (NSHTTPURLResponse *)response;
-        
-                               if (!error && ([urlResponse URL] == _sendURL)) {
-                                   [self resultTip:ShareTypeMail withResult:YES];
-                                   [shadowView removeFromSuperview];
-                               }
-                               else {
-                                   NSLog(@"An error occured, Status Code: %i", urlResponse.statusCode);
-                                   NSLog(@"Description: %@", [error localizedDescription]);
-                                   NSLog(@"Response Body: %@", [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
-                               }
-                           }];
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:request
+                                         returningResponse:&response
+                                                     error:&error];
+    NSLog(@"data === %@, response === %@, error === %@",
+          [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding],
+          response,
+          error);
+    if ((response.URL == _sendURL) && !error) {
+        [self resultTip:ShareTypeMail withResult:YES];
+    }
 
+//    [NSURLConnection sendAsynchronousRequest:request
+//                                       queue:_mainQueue
+//                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+//                               ;
+//                           }];
 }
 
 - (IBAction)shareToEmail:(id)sender {
@@ -167,12 +184,29 @@
         return;
     }
 
-    //  登录
-    [self requestURL:[NSURL URLWithString:@"https://ebm.cheetahmail.com/api/login1?name=el_cn@api&cleartext=Cheetah!"]];
-    //  发送
-    NSString *urlStr = [NSString stringWithFormat:@"https://ebm.cheetahmail.com/ebm/ebmtrigger1?aid=%@&email=%@&eid=%@&FULL_NAME=%@",@"2077265562",_EmailField.text,@"234942",@"WEI"];
-    _sendURL = [NSURL URLWithString:urlStr];
-    [self requestURL:_sendURL];
+    [_EmailField resignFirstResponder];
+    UIView *shadow = [self addShadowView];
+    //    友盟检测代码（记录邮箱）
+    [MobClick event:@"email" label:_EmailField.text];
+
+    
+    NSURL *url = [NSURL URLWithString:@"https://ebm.cheetahmail.com/api/login1?name=el_cn@api&cleartext=Cheetah!"];
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:url] queue:_mainQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (connectionError)
+            return ;
+        
+        NSString *urlStr = [NSString stringWithFormat:@"https://ebm.cheetahmail.com/ebm/ebmtrigger1?aid=2077265562&email=%@&eid=%@",_EmailField.text,_event[self.currentIndex - 1]];
+        NSURLRequest *urlReq = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
+        [NSURLConnection sendAsynchronousRequest:urlReq queue:_mainQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+            UIActivityIndicatorView *active = (UIActivityIndicatorView *)[self.view viewWithTag:kActiveTag];
+            [active stopAnimating];
+            [active removeFromSuperview];
+            [shadow removeFromSuperview];
+
+            if (!connectionError)
+                [self resultTip:ShareTypeMail withResult:YES];
+        }];
+    }];
 }
 
 
@@ -232,9 +266,9 @@
     UIButton *btn = (UIButton *)sender;
     
     ShareType type;
+    id<ISSCAttachment> image;
     NSString *str = [NSString stringWithFormat:@"share%d",self.currentIndex];
     NSString *imagePath = [[NSBundle mainBundle] pathForResource:str ofType:@"jpg"];
-    id<ISSCAttachment> image = [ShareSDK imageWithPath:imagePath];
 
     if (btn.tag == 1001)
         type = ShareTypeTencentWeibo;
@@ -252,10 +286,8 @@
             return;
         }
         type = ShareTypeWeixiTimeline;
-        NSString *imgPath = [[NSBundle mainBundle] pathForResource:@"icon" ofType:@"jpg"];
-        image = [ShareSDK imageWithPath:imgPath];
+        imagePath = [[NSBundle mainBundle] pathForResource:@"icon" ofType:@"jpg"];
     }
-    
     
     id<ISSContent> publishContent = nil;
     //  设置日期格式
@@ -264,9 +296,10 @@
     [dateFormat setDateFormat:@"HH:mm:ss"];
     NSString *dateStr = [dateFormat stringFromDate:date];
     //  分享内容
-    NSString *contentString = [NSString stringWithFormat:@"#琉光主角 唇动心弦#我已找到专属于我的琉光唇色，在节日季，上演绝色致雅，前往@雅诗兰黛 专柜体验琉光主角绚色妆容，亲吻琉光满溢。       %@",dateStr];
+    NSString *contentString = [NSString stringWithFormat:@"#琉光主角 唇动心弦#我已找到专属于我的琉光唇色，在节日季，上演绝色致雅，前往@雅诗兰黛 专柜体验琉光主角绚色妆容，亲吻琉光满溢。      ——%@",dateStr];
+    image = [ShareSDK imageWithPath:imagePath];
     NSString *titleString   = @"琉光主角唇膏";
-    NSString *urlString     = _weixinImages[self.currentIndex];
+    NSString *urlString     = _weixinImages[self.currentIndex-1];
     NSString *description   = nil;
 
     publishContent = [ShareSDK content:contentString
@@ -288,14 +321,13 @@
                              id<ISSPlatformShareInfo> statusInfo,
                              id<ICMErrorInfo> error,
                              BOOL end) {
-//                        NSLog(@"%@,%d,%d",[error errorDescription],[error errorCode],[error errorLevel]);
                         if (state == SSResponseStateSuccess) {
                             [self resultTip:type withResult:YES];
                         }
                         else if (state == SSResponseStateFail) {
                             [self resultTip:type withResult:NO];
                         }else if (state == SSResponseStateCancel) {
-                            ;// 居然没有取消这种情况
+                            ;// 仅微信取消可以调到
                         }
                     }];
 }
@@ -306,5 +338,9 @@
     }];
 }
 
+- (void)dealloc
+{
+    [_mainQueue cancelAllOperations];
+}
 
 @end

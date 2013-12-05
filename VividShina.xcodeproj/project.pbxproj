@@ -125,7 +125,6 @@
 		91611FB7184B054C00EF6ECF /* left2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91611FB4184B054B00EF6ECF /* left2.jpg */; };
 		91611FB8184B054C00EF6ECF /* left3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91611FB5184B054B00EF6ECF /* left3.jpg */; };
 		91611FB9184B054C00EF6ECF /* left4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91611FB6184B054C00EF6ECF /* left4.jpg */; };
-		91611FC0184B204200EF6ECF /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91611FBF184B204200EF6ECF /* SwipeView.m */; };
 		9177FAE2184C397D007C4B94 /* ShareDoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9177FAE0184C397D007C4B94 /* ShareDoneViewController.m */; };
 		9177FAE3184C397D007C4B94 /* ShareDoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9177FAE1184C397D007C4B94 /* ShareDoneViewController.xib */; };
 		9177FAE9184C3A10007C4B94 /* enter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9177FAE8184C3A10007C4B94 /* enter.jpg */; };
@@ -422,8 +421,6 @@
 		91611FB4184B054B00EF6ECF /* left2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = left2.jpg; path = image/left2.jpg; sourceTree = "<group>"; };
 		91611FB5184B054B00EF6ECF /* left3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = left3.jpg; path = image/left3.jpg; sourceTree = "<group>"; };
 		91611FB6184B054C00EF6ECF /* left4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = left4.jpg; path = image/left4.jpg; sourceTree = "<group>"; };
-		91611FBE184B204200EF6ECF /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
-		91611FBF184B204200EF6ECF /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
 		9177FADF184C397D007C4B94 /* ShareDoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareDoneViewController.h; sourceTree = "<group>"; };
 		9177FAE0184C397D007C4B94 /* ShareDoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareDoneViewController.m; sourceTree = "<group>"; };
 		9177FAE1184C397D007C4B94 /* ShareDoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareDoneViewController.xib; sourceTree = "<group>"; };
@@ -870,18 +867,8 @@
 			isa = PBXGroup;
 			children = (
 				91DD2631184D7C3C00E03F6F /* ShareSDK_v2.6.1 */,
-				9177FB6E184C57C3007C4B94 /* SwipeView */,
 			);
 			path = 3rd;
-			sourceTree = "<group>";
-		};
-		9177FB6E184C57C3007C4B94 /* SwipeView */ = {
-			isa = PBXGroup;
-			children = (
-				91611FBE184B204200EF6ECF /* SwipeView.h */,
-				91611FBF184B204200EF6ECF /* SwipeView.m */,
-			);
-			name = SwipeView;
 			sourceTree = "<group>";
 		};
 		91915BFB184C26FE00B92B16 /* share */ = {
@@ -1479,7 +1466,6 @@
 				913B81EF184850860033E762 /* VIShareViewController.m in Sources */,
 				915E83B61845CB7500070A20 /* main.m in Sources */,
 				9177FAE2184C397D007C4B94 /* ShareDoneViewController.m in Sources */,
-				91611FC0184B204200EF6ECF /* SwipeView.m in Sources */,
 				91D7E6111846D8DF0094B70D /* HomeViewController.m in Sources */,
 				913B81881848296E0033E762 /* DescriptionViewController.m in Sources */,
 				91D7E62A1847241D0094B70D /* BallViewController.m in Sources */,

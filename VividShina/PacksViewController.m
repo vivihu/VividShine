@@ -176,6 +176,13 @@
                      }];
 }
 
+- (void)scrollToIndexPage:(NSInteger)indexPage
+{
+    _pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+    _pageControl.currentPage = indexPage - _pageNumber;
+    [_textSwipeView scrollToPage:indexPage duration:0.3f];
+}
+
 #pragma mark - SwipeViewDataSource
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
@@ -209,13 +216,6 @@
     return view;
 }
 
-- (void)scrollToIndexPage:(NSInteger)indexPage
-{
-    _pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
-    _pageControl.currentPage = indexPage - _pageNumber;
-    [_textSwipeView scrollToPage:indexPage duration:0.3f];
-}
-
 #pragma mark SwipeViewDelegate
 - (void)swipeViewDidEndDecelerating:(SwipeView *)swipeView
 {
@@ -232,7 +232,8 @@
 
 - (void)swipeViewDidEndScrollingAnimation:(SwipeView *)swipeView
 {
-    [self scrollToIndexPage:swipeView.currentPage];
+    if (swipeView == _imageSwipeView)
+        [self scrollToIndexPage:swipeView.currentPage];
 }
 
 - (void)swipeViewCurrentItemIndexDidChange:(SwipeView *)swipeView
