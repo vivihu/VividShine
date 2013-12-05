@@ -38,7 +38,7 @@
                     <rect key="frame" x="399" y="128" width="625" height="640"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                 </scrollView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mouth1.png" id="E8z-as-zYe">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mouth10.png" id="E8z-as-zYe">
                     <rect key="frame" x="224" y="206" width="84" height="116"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -59,6 +59,7 @@
         <image name="background.jpg" width="1024" height="768"/>
         <image name="cungao_Left.jpg" width="396" height="640"/>
         <image name="mouth1.png" width="84" height="116"/>
+        <image name="mouth10.png" width="84" height="116"/>
         <image name="wenzi.png" width="423" height="182"/>
     </resources>
 </document>

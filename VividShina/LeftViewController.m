@@ -148,9 +148,18 @@
     
     _colorWord.textColor = [[_colors objectAtIndex:indexTag-1]objectAtIndex:1];
     _colorWord.text = [[_colors objectAtIndex:indexTag-1]objectAtIndex:0];
+
+    
     [_colorWord sizeToFit];
     CGRect rectNOW = _colorWord.frame;
-    [_colorWord setFrame:CGRectMake(396 - rectNOW.size.width - 44, 670, rectNOW.size.width + 44, 63)];
+    _colorWord.frame = CGRectMake(396, 670, 400, 63);
+    [UIView animateWithDuration:0.7f
+                          delay:0.2f
+                        options:UIViewAnimationOptionTransitionFlipFromTop animations:^{
+                            [_colorWord setFrame:CGRectMake(396 - rectNOW.size.width - 44, 670, rectNOW.size.width + 44, 63)];
+                        } completion:^(BOOL finished) {
+                            ;
+                        }];
 }
 
 @end
