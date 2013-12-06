@@ -211,7 +211,8 @@
 - (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(UIView *)view
 {
     UIImageView *imgView = (UIImageView *)view;
-    NSString *imgPath = nil;
+//    NSString *imgPath = nil;
+    NSString *imageFileName = nil;
     
     if (swipeView == _textSwipeView) {
         if (view == nil)
@@ -219,7 +220,8 @@
             imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 308.f, 640.f)];
             view = imgView;
         }
-        imgPath = [[NSBundle mainBundle] pathForResource:_textData[index] ofType:@"png"];
+//        imgPath = [[NSBundle mainBundle] pathForResource:_textData[index] ofType:@"png"];
+        imageFileName = [NSString stringWithFormat:@"%@.png",_textData[index]];
     }
     else {
         if (view == nil)
@@ -227,10 +229,12 @@
             imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 712.f, 640.f)];
             view = imgView;
         }
-        imgPath = [[NSBundle mainBundle] pathForResource:_imageData[index] ofType:@"jpg"];
+//        imgPath = [[NSBundle mainBundle] pathForResource:_imageData[index] ofType:@"jpg"];
+        imageFileName = [NSString stringWithFormat:@"%@.jpg",_imageData[index]];
     }
     
-    imgView.image = [UIImage imageWithContentsOfFile:imgPath];
+//    imgView.image = [UIImage imageWithContentsOfFile:imgPath];
+    imgView.image = [UIImage imageNamed:imageFileName];
 
     return view;
 }

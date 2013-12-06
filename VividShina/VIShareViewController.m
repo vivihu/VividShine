@@ -196,7 +196,9 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [_activeView setHidesWhenStopped:YES];
                 [shadow removeFromSuperview];
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"出错了" message:nil delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+                
+                NSString *errorStr = [NSString stringWithFormat:@"%@",connectionError.localizedDescription];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"出错了" message:errorStr delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
                 [alert show];
             });
             return ;
