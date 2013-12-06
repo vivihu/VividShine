@@ -106,7 +106,7 @@
     return [emailTest evaluateWithObject:email];
 }
 
-- (void)resultTip:(ShareType)type withResult:(BOOL)success
+- (void)resultTip:(ShareType)type withResult:(id<ICMErrorInfo>)error
 {
     NSString *title = nil;
     switch (type) {
@@ -126,7 +126,7 @@
         default:
             break;
     }
-    if (success) {
+    if (!error) {
         UIAlertView *view =
         [[UIAlertView alloc] initWithTitle:title
                                    message:@"分享成功！"
@@ -135,41 +135,17 @@
                          otherButtonTitles:nil];
         [view show];
     }
-//    else {
-//        UIAlertView *view =
-//        [[UIAlertView alloc] initWithTitle:title
-//                                   message:@"分享失败"
-//                                  delegate:nil
-//                         cancelButtonTitle:@"知道了"
-//                         otherButtonTitles:nil];
-//        [view show];
-//    }
-}
-
-- (void)requestURL:(NSURL *)url
-{
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    
-    [request setHTTPMethod:@"GET"];
-    NSURLResponse *response = nil;
-    NSError *error = nil;
-    NSData *data = [NSURLConnection sendSynchronousRequest:request
-                                         returningResponse:&response
-                                                     error:&error];
-    NSLog(@"data === %@, response === %@, error === %@",
-          [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding],
-          response,
-          error);
-    if ((response.URL == _sendURL) && !error) {
-        [self resultTip:ShareTypeMail withResult:YES];
+    else {
+        UIAlertView *view =
+        [[UIAlertView alloc] initWithTitle:title
+                                   message:[error errorDescription]
+                                  delegate:nil
+                         cancelButtonTitle:@"知道了"
+                         otherButtonTitles:nil];
+        [view show];
     }
-
-//    [NSURLConnection sendAsynchronousRequest:request
-//                                       queue:_mainQueue
-//                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-//                               ;
-//                           }];
 }
+
 
 - (IBAction)shareToEmail:(id)sender {
     [_scrollView setContentOffset:CGPointMake(0, 170) animated:YES];
@@ -212,7 +188,7 @@
             NSLog(@"%d",[NSThread isMainThread]);
             if (!connectionError) {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self resultTip:ShareTypeMail withResult:YES];
+                    [self resultTip:ShareTypeMail withResult:nil];
                 });
             }
         }];
@@ -331,14 +307,10 @@
                              id<ISSPlatformShareInfo> statusInfo,
                              id<ICMErrorInfo> error,
                              BOOL end) {
-                        if (state == SSResponseStateSuccess) {
-                            [self resultTip:type withResult:YES];
+                        if ([error errorCode] == -103 || state == SSResponseStateBegan || state == SSResponseStateCancel) {
+                            return ;
                         }
-                        else if (state == SSResponseStateFail) {
-//                            [self resultTip:type withResult:NO];
-                        }else if (state == SSResponseStateCancel) {
-                            ;// 仅微信取消可以调到
-                        }
+                        [self resultTip:type withResult:error];
                     }];
 }
 
