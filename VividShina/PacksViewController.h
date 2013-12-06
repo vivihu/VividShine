@@ -18,6 +18,7 @@
     
     NSArray *_textData;
     NSArray *_imageData;
+    NSTimer *_timer;
 }
 
 @end

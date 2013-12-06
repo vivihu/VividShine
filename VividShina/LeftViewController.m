@@ -48,20 +48,23 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    ;
+    if (!_homeBtn) {
+        _homeBtn = [self creatHomeBtn];
+        [_homeBtn setUserInteractionEnabled:NO];
+        [self.navigationController.view addSubview:_homeBtn];
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if (_homeBtn) {
+        [_homeBtn setUserInteractionEnabled:YES];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     ;
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    if (!_homeBtn) {
-        _homeBtn = [self creatHomeBtn];
-        [self.navigationController.view addSubview:_homeBtn];
-    }
 }
 
 - (void)loadFirst

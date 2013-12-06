@@ -47,19 +47,25 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    ;
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    ;
+    if (!_homeBtn) {
+        _homeBtn = [self creatHomeBtn];
+        [_homeBtn setUserInteractionEnabled:NO];
+        [self.navigationController.view addSubview:_homeBtn];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    if (!_homeBtn) {
-        _homeBtn = [self creatHomeBtn];
-        [self.navigationController.view addSubview:_homeBtn];
+    if (_homeBtn) {
+        [_homeBtn setUserInteractionEnabled:YES];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    if (_homeBtn) {
+        [_homeBtn removeFromSuperview];
+        _homeBtn = nil;
     }
 }
 
@@ -74,6 +80,7 @@
     _pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
     [self.view bringSubviewToFront:_pageControl];
     
+    _timer = [NSTimer scheduledTimerWithTimeInterval:4.0f target:self selector:@selector(autoplay:) userInfo:nil repeats:YES];
 
     _textData = [[NSArray alloc] initWithObjects:
                  @"1_1",
@@ -100,6 +107,17 @@
                   @"pack_kv11",
                   @"pack_kv12",
                   nil];
+}
+
+- (void)autoplay:(NSTimer *)timer
+{
+    NSInteger currentPage = _imageSwipeView.currentPage;
+    NSInteger nextPage = currentPage + 1;
+    if (currentPage >= kPageOne + kPageTwo + kPageThr - 1) {
+        nextPage = 0;
+    }
+    
+    [_imageSwipeView scrollToPage:nextPage duration:0.5f];
 }
 
 - (void)creatSwipeView
@@ -157,7 +175,8 @@
 {
     NSUInteger btnIndex = [(UIButton *)sender tag]-200;
     [self setSliderRectIndex:btnIndex];
-    
+    [_timer setFireDate:[NSDate dateWithTimeIntervalSinceNow:3.0f]];
+
     if (btnIndex == 0)
         [_imageSwipeView scrollToPage:0 duration:0.5f];
     else if (btnIndex == 1)
@@ -220,7 +239,8 @@
 - (void)swipeViewDidEndDecelerating:(SwipeView *)swipeView
 {
     [self scrollToIndexPage:swipeView.currentPage];
-    
+    [_timer setFireDate:[NSDate dateWithTimeIntervalSinceNow:3.0f]];
+
     NSInteger indexPage = swipeView.currentPage;
     if (indexPage < kPageOne)
         [self setSliderRectIndex:0];
@@ -232,8 +252,18 @@
 
 - (void)swipeViewDidEndScrollingAnimation:(SwipeView *)swipeView
 {
-    if (swipeView == _imageSwipeView)
+    if (swipeView == _imageSwipeView) {
+        NSInteger indexPage = swipeView.currentPage;
+
+        if (indexPage < kPageOne)
+            [self setSliderRectIndex:0];
+        else if (indexPage >= kPageOne && indexPage < kPageOne+kPageTwo)
+            [self setSliderRectIndex:1];
+        else
+            [self setSliderRectIndex:2];
+
         [self scrollToIndexPage:swipeView.currentPage];
+    }
 }
 
 - (void)swipeViewCurrentItemIndexDidChange:(SwipeView *)swipeView

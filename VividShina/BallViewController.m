@@ -11,7 +11,7 @@
 
 @interface BallViewController ()
 {
-//    UIButton *_backBtn;
+//    UIButton *_homeBtn;
     int first, sec, third, fourth;
 }
 @end
@@ -42,16 +42,31 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    if (!_homeBtn) {
+        _homeBtn = [self creatHomeBtn];
+        [_homeBtn setUserInteractionEnabled:NO];
+        [self.navigationController.view addSubview:_homeBtn];
+    }
+
     [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    if (_homeBtn) {
+        [_homeBtn setUserInteractionEnabled:YES];
+    }
+
     [super viewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+    if (_homeBtn) {
+        [_homeBtn removeFromSuperview];
+        _homeBtn = nil;
+    }
+
     [super viewWillDisappear:animated];
 }
 
