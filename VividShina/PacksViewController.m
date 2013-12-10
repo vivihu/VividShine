@@ -221,7 +221,7 @@
             view = imgView;
         }
 //        imgPath = [[NSBundle mainBundle] pathForResource:_textData[index] ofType:@"png"];
-        imageFileName = [NSString stringWithFormat:@"%@.png",_textData[index]];
+        imageFileName = [NSString stringWithFormat:@"%@.jpg",_textData[index]];
     }
     else {
         if (view == nil)

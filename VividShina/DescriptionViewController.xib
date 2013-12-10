@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DescriptionViewController">
             <connections>
-                <outlet property="_resultImage" destination="OF6-ZD-2ko" id="OwX-9O-sGn"/>
+                <outlet property="_resultImage" destination="WnV-tq-pWK" id="vat-44-bEY"/>
                 <outlet property="_shareBtn" destination="5cW-Cw-dHT" id="Gky-2W-PJe"/>
                 <outlet property="view" destination="2" id="3"/>
             </connections>
@@ -17,13 +17,9 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" id="WnV-tq-pWK">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="one.jpg" id="WnV-tq-pWK">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="OF6-ZD-2ko">
-                    <rect key="frame" x="0.0" y="84" width="1024" height="684"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5cW-Cw-dHT">
                     <rect key="frame" x="74" y="424" width="171" height="43"/>
@@ -35,13 +31,25 @@
                         <action selector="shareToFriend:" destination="-1" eventType="touchUpInside" id="kU1-OQ-yat"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5fX-uM-vuk">
+                    <rect key="frame" x="74" y="628" width="176" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="jump.jpg">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="jumpToShareDoneViewController:" destination="-1" eventType="touchUpInside" id="rMR-kO-2zZ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
         </view>
     </objects>
     <resources>
-        <image name="background.jpg" width="1024" height="768"/>
-        <image name="fenxiang.jpg" width="171" height="43"/>
+        <image name="fenxiang.jpg" width="172" height="44"/>
+        <image name="jump.jpg" width="176" height="35"/>
+        <image name="one.jpg" width="1024" height="768"/>
     </resources>
 </document>

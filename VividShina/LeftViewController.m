@@ -82,7 +82,7 @@
                  @[@"PINK RIOT",[UIColor colorWithRed:0.878 green:0.318 blue:0.467 alpha:1.000]],
                  @[@"PINK VOLTAGE",[UIColor colorWithRed:0.867 green:0.380 blue:0.471 alpha:1.000]],
                  @[@"FIREBALL",[UIColor colorWithRed:0.871 green:0.173 blue:0.298 alpha:1.000]],
-                 @[@"ELECTRIC",[UIColor colorWithRed:0.925 green:0.537 blue:0.722 alpha:1.000]],
+                 @[@"ELECTRIC MAUVE",[UIColor colorWithRed:0.925 green:0.537 blue:0.722 alpha:1.000]],
                  @[@"MAUVE STRUCK",[UIColor colorWithRed:0.933 green:0.498 blue:0.522 alpha:1.000]],
                  @[@"BRILLIANT BARE",[UIColor colorWithRed:0.886 green:0.553 blue:0.455 alpha:1.000]],
                  @[@"SPIKED TOFFEE",[UIColor colorWithRed:0.773 green:0.557 blue:0.467 alpha:1.000]],

@@ -30,10 +30,11 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" id="wkU-1i-UpI">
+                <view contentMode="scaleToFill" id="xBV-wn-Vah">
                     <rect key="frame" x="399" y="128" width="625" height="640"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                </imageView>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BXf-4D-irQ">
                     <rect key="frame" x="399" y="128" width="625" height="640"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
@@ -46,8 +47,28 @@
                     <rect key="frame" x="224" y="206" width="84" height="116"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wenzi.png" id="9Ub-Xa-Atb">
-                    <rect key="frame" x="448" y="188" width="423" height="182"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="琉光绚色  凝于唇" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tC1-fQ-CWc">
+                    <rect key="frame" x="448" y="183" width="339" height="54"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KNJ-7S-IxT">
+                    <rect key="frame" x="448" y="242" width="450" height="87"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <string key="text">全新花漾唇膏莹炫系列，将珍贵的凝萃之光，
+糅入浓郁饱满的12款琉光中，双唇被深深柔化、滋润，又如钻石般折射光芒。摩登气质，一抹跃然！</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;   滑动选择12款唇膏试色  >" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ovb-70-DQk">
+                    <rect key="frame" x="450" y="335" width="240" height="43"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow.png" id="8vM-IS-hkd">
+                    <rect key="frame" x="0.0" y="127" width="1024" height="3"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -56,10 +77,9 @@
         </view>
     </objects>
     <resources>
-        <image name="background.jpg" width="1024" height="768"/>
         <image name="cungao_Left.jpg" width="396" height="640"/>
         <image name="mouth1.png" width="84" height="116"/>
         <image name="mouth10.png" width="84" height="116"/>
-        <image name="wenzi.png" width="423" height="182"/>
+        <image name="shadow.png" width="1024" height="3"/>
     </resources>
 </document>

@@ -25,5 +25,6 @@ typedef enum {
 @property (nonatomic) MyStyle myStyle;
 
 - (IBAction)shareToFriend:(id)sender;
+- (IBAction)jumpToShareDoneViewController:(id)sender;
 
 @end

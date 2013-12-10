@@ -8,11 +8,12 @@
 
 #import "DescriptionViewController.h"
 #import "VIShareViewController.h"
+#import "ShareDoneViewController.h"
 
-#define frameONE CGRectMake(74, 420, 171, 43)
-#define frameTWO CGRectMake(74, 440, 171, 43)
-#define frameTHR CGRectMake(74, 408, 171, 43)
-#define frameFOU CGRectMake(74, 424, 171, 43)
+#define frameONE CGRectMake(74, 420, 172, 44)
+#define frameTWO CGRectMake(74, 440, 172, 44)
+#define frameTHR CGRectMake(74, 408, 172, 44)
+#define frameFOU CGRectMake(74, 424, 172, 44)
 
 @interface DescriptionViewController ()
 {
@@ -82,25 +83,25 @@
         case style_one:
         {
             [_shareBtn setFrame:frameONE];
-            imgPath = [[NSBundle mainBundle] pathForResource:@"one" ofType:@"png"];
+            imgPath = [[NSBundle mainBundle] pathForResource:@"one" ofType:@"jpg"];
         }
             break;
         case style_two:
         {
             [_shareBtn setFrame:frameTWO];
-            imgPath = [[NSBundle mainBundle] pathForResource:@"two" ofType:@"png"];
+            imgPath = [[NSBundle mainBundle] pathForResource:@"two" ofType:@"jpg"];
         }
             break;
         case style_three:
         {
             [_shareBtn setFrame:frameTHR];
-            imgPath = [[NSBundle mainBundle] pathForResource:@"three" ofType:@"png"];
+            imgPath = [[NSBundle mainBundle] pathForResource:@"three" ofType:@"jpg"];
         }
             break;
         case style_four:
         {
             [_shareBtn setFrame:frameFOU];
-            imgPath = [[NSBundle mainBundle] pathForResource:@"four" ofType:@"png"];
+            imgPath = [[NSBundle mainBundle] pathForResource:@"four" ofType:@"jpg"];
         }
             break;
 
@@ -120,6 +121,11 @@
     [self presentViewController:shareVC animated:YES completion:^{
         ;
     }];
+}
+
+- (IBAction)jumpToShareDoneViewController:(id)sender {
+    ShareDoneViewController *shareDone = [[ShareDoneViewController alloc] initWithNibName:@"ShareDoneViewController" bundle:nil];
+    [self.navigationController pushViewController:shareDone animated:YES];
 }
 
 @end
