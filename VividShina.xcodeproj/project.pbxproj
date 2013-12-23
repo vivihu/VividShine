@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		91100F56184DD84100279859 /* libMailCore-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91100F4D184DD7FC00279859 /* libMailCore-ios.a */; };
 		91100F58184DD84700279859 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91100F57184DD84700279859 /* CFNetwork.framework */; };
 		91100F5A184DD85C00279859 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91100F59184DD85C00279859 /* Security.framework */; };
 		91100F5C184DDA7300279859 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91100F5B184DDA7300279859 /* libsqlite3.dylib */; };
@@ -231,48 +230,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		91100F4A184DD7FC00279859 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C64EA537169E772200778456;
-			remoteInfo = "static mailcore2 osx";
-		};
-		91100F4C184DD7FC00279859 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C6BA2C191705F4E6003F0E9E;
-			remoteInfo = "static mailcore2 ios";
-		};
-		91100F4E184DD7FC00279859 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C64EA78C169F259200778456;
-			remoteInfo = tests;
-		};
-		91100F50184DD7FC00279859 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C6A81B911706840C00882C15;
-			remoteInfo = "test-ios";
-		};
-		91100F52184DD7FC00279859 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C6BD288D170BD71100A91AC1;
-			remoteInfo = "mailcore osx";
-		};
-		91100F54184DD81800279859 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C6BA2B091705F4E6003F0E9E;
-			remoteInfo = "static mailcore2 ios";
-		};
 		915E83C61845CB7500070A20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 915E839E1845CB7400070A20 /* Project object */;
@@ -283,7 +240,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		91100F42184DD7FA00279859 /* mailcore2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mailcore2.xcodeproj; path = "../mailcore2/build-mac/mailcore2.xcodeproj"; sourceTree = "<group>"; };
 		91100F57184DD84700279859 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		91100F59184DD85C00279859 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		91100F5B184DDA7300279859 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -540,7 +496,6 @@
 				9177FB72184C5856007C4B94 /* QuartzCore.framework in Frameworks */,
 				91100F5A184DD85C00279859 /* Security.framework in Frameworks */,
 				91100F58184DD84700279859 /* CFNetwork.framework in Frameworks */,
-				91100F56184DD84100279859 /* libMailCore-ios.a in Frameworks */,
 				91DD269C184D7C3D00E03F6F /* ShareSDKCoreService.framework in Frameworks */,
 				9177FB7A184C5885007C4B94 /* MessageUI.framework in Frameworks */,
 				91DD26A6184D7C3D00E03F6F /* libWeChatSDK.a in Frameworks */,
@@ -586,18 +541,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		91100F43184DD7FA00279859 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				91100F4B184DD7FC00279859 /* libMailCore.a */,
-				91100F4D184DD7FC00279859 /* libMailCore-ios.a */,
-				91100F4F184DD7FC00279859 /* tests */,
-				91100F51184DD7FC00279859 /* test-ios.app */,
-				91100F53184DD7FC00279859 /* MailCore.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		913B81F1184865440033E762 /* Lipstick */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,7 +657,6 @@
 		915E839D1845CB7400070A20 = {
 			isa = PBXGroup;
 			children = (
-				91100F42184DD7FA00279859 /* mailcore2.xcodeproj */,
 				915E83AF1845CB7500070A20 /* VividShina */,
 				915E83C81845CB7500070A20 /* VividShinaTests */,
 				915E83A81845CB7500070A20 /* Frameworks */,
@@ -1088,7 +1030,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				91100F55184DD81800279859 /* PBXTargetDependency */,
 			);
 			name = VividShina;
 			productName = VividShina;
@@ -1138,12 +1079,6 @@
 			mainGroup = 915E839D1845CB7400070A20;
 			productRefGroup = 915E83A71845CB7500070A20 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 91100F43184DD7FA00279859 /* Products */;
-					ProjectRef = 91100F42184DD7FA00279859 /* mailcore2.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				915E83A51845CB7400070A20 /* VividShina */,
@@ -1151,44 +1086,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		91100F4B184DD7FC00279859 /* libMailCore.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libMailCore.a;
-			remoteRef = 91100F4A184DD7FC00279859 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		91100F4D184DD7FC00279859 /* libMailCore-ios.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libMailCore-ios.a";
-			remoteRef = 91100F4C184DD7FC00279859 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		91100F4F184DD7FC00279859 /* tests */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = tests;
-			remoteRef = 91100F4E184DD7FC00279859 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		91100F51184DD7FC00279859 /* test-ios.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "test-ios.app";
-			remoteRef = 91100F50184DD7FC00279859 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		91100F53184DD7FC00279859 /* MailCore.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MailCore.framework;
-			remoteRef = 91100F52184DD7FC00279859 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		915E83A41845CB7400070A20 /* Resources */ = {
@@ -1441,11 +1338,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		91100F55184DD81800279859 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "static mailcore2 ios";
-			targetProxy = 91100F54184DD81800279859 /* PBXContainerItemProxy */;
-		};
 		915E83C71845CB7500070A20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 915E83A51845CB7400070A20 /* VividShina */;
@@ -1582,21 +1474,7 @@
 					"\"$(SRCROOT)/VividShina/3rd/ShareSDK_v2.6.1/Extend/WeChatSDK\"",
 					"\"$(SRCROOT)/VividShina\"",
 				);
-				OTHER_LDFLAGS = (
-					"-lctemplate-ios",
-					"-letpan-ios",
-					"-licudata",
-					"-licui18n",
-					"-licuuc",
-					"-lxml2",
-					"-lsasl2",
-					"-liconv",
-					"-ltidy",
-					"-lz",
-					"-lstdc++",
-					"-stdlib=libstdc++",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "armv7 armv7s";
@@ -1631,21 +1509,7 @@
 					"\"$(SRCROOT)/VividShina/3rd/ShareSDK_v2.6.1/Extend/WeChatSDK\"",
 					"\"$(SRCROOT)/VividShina\"",
 				);
-				OTHER_LDFLAGS = (
-					"-lctemplate-ios",
-					"-letpan-ios",
-					"-licudata",
-					"-licui18n",
-					"-licuuc",
-					"-lxml2",
-					"-lsasl2",
-					"-liconv",
-					"-ltidy",
-					"-lz",
-					"-lstdc++",
-					"-stdlib=libstdc++",
-					"-ObjC",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
