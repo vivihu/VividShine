@@ -10,10 +10,10 @@
 #import "VIShareViewController.h"
 #import "ShareDoneViewController.h"
 
-#define frameONE CGRectMake(74, 420, 172, 44)
-#define frameTWO CGRectMake(74, 440, 172, 44)
-#define frameTHR CGRectMake(74, 408, 172, 44)
-#define frameFOU CGRectMake(74, 424, 172, 44)
+#define frameONE CGRectMake(74, 420, 171, 43)
+#define frameTWO CGRectMake(74, 440, 171, 43)
+#define frameTHR CGRectMake(74, 408, 171, 43)
+#define frameFOU CGRectMake(74, 424, 171, 43)
 
 @interface DescriptionViewController ()
 {

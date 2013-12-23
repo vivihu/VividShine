@@ -14,6 +14,9 @@
     IBOutlet UIScrollView *_kvScrollView;
     IBOutlet UIPageControl *_pageControl;
     
+    IBOutlet UIButton *_btn1;
+    IBOutlet UIButton *_btn2;
+    IBOutlet UIButton *_btn3;
     NSTimer *_timer;
 }
 

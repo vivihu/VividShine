@@ -7,6 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
             <connections>
+                <outlet property="_btn1" destination="CSZ-0v-ztR" id="ZHc-fK-lAo"/>
+                <outlet property="_btn2" destination="aBq-ob-dAa" id="J9i-n6-0ge"/>
+                <outlet property="_btn3" destination="mmm-fX-poK" id="lNd-8W-4g1"/>
                 <outlet property="_kvScrollView" destination="RJe-80-dnq" id="G6w-G8-2UC"/>
                 <outlet property="_pageControl" destination="MJX-dz-fNB" id="kUD-UE-a9M"/>
                 <outlet property="view" destination="2" id="3"/>
@@ -61,6 +64,11 @@
                     <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="currentPageIndicatorTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </pageControl>
+                <view contentMode="scaleToFill" id="bl6-ga-tBZ">
+                    <rect key="frame" x="54" y="350" width="184" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>

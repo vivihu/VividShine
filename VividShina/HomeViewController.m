@@ -33,6 +33,7 @@
 {
     [super viewDidLoad];
     [self configScrollView];
+    [self configButtonShadow];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,6 +43,25 @@
 }
 
 #pragma mark - Private Method
+- (void)configButtonShadow
+{
+    _btn1.layer.shadowOffset = CGSizeMake(0, 3);
+    _btn1.layer.shadowColor = [UIColor blackColor].CGColor;
+    _btn1.layer.shadowOpacity=0.5;
+    
+
+    _btn2.layer.shadowOffset = CGSizeMake(0, 3);
+    _btn2.layer.shadowColor = [UIColor blackColor].CGColor;
+    _btn2.layer.shadowOpacity=0.5;
+    
+
+    _btn3.layer.shadowOffset = CGSizeMake(0, 3);
+    _btn3.layer.shadowColor = [UIColor blackColor].CGColor;
+    _btn3.layer.shadowOpacity=0.5;
+    
+
+}
+
 - (void)configScrollView
 {
     _pageControl.numberOfPages = kNumber;

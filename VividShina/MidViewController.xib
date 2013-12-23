@@ -49,7 +49,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0pQ-zZ-LHi">
-                    <rect key="frame" x="421" y="671" width="138" height="32"/>
+                    <rect key="frame" x="421" y="671" width="138" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="h2.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,8 +107,8 @@
         <image name="f1.png" width="125" height="32"/>
         <image name="f2.png" width="125" height="32"/>
         <image name="h1.png" width="138" height="32"/>
-        <image name="h2.png" width="138" height="32"/>
-        <image name="ka1.png" width="144" height="33"/>
+        <image name="h2.png" width="138" height="31"/>
+        <image name="ka1.png" width="142" height="32"/>
         <image name="ka2.png" width="144" height="33"/>
         <image name="zi1.png" width="131" height="31"/>
         <image name="zi2.png" width="131" height="31"/>
